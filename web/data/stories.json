@@ -1,0 +1,3054 @@
+{
+  "stories": [
+    {
+      "id": "forest",
+      "title": "缩进森林",
+      "subtitle": "让每一行站到正确的位置",
+      "difficulty": 1,
+      "intro": "缩进森林的树会按层级生长。走错一层，整条路就会塌。\n\n先让 Python 打印出 forest，证明你懂得让代码站在正确的位置。",
+      "color": "#7BD88F",
+      "companion": "叶灵",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "森林入口",
+          "text": "缩进森林的树会按层级生长。走错一层，整条路就会塌。\n\n先让 Python 打印出 forest，证明你懂得让代码站在正确的位置。",
+          "choices": [
+            {
+              "text": "先观察树干的层级",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接往前写",
+              "next": "code1"
+            },
+            {
+              "text": "从旁边的空地绕过去",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "缩进森林的树会按层级生长。走错一层，整条路就会塌。\n\n先让 Python 打印出 forest，证明你懂得让代码站在正确的位置。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "叶灵",
+              "text": "这里的树只认缩进，不认勇气。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那我先把第一行站稳。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "缩进森林的树会按层级生长。走错一层，整条路就会塌。\n\n先让 Python 打印出 forest，证明你懂得让代码站在正确的位置。\n\n输出一行：forest",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一片叶子",
+          "text": "叶灵递给你一片空白的叶子。",
+          "prompt": "输出一行：forest",
+          "time": 270,
+          "starter": "# 输出 forest\n",
+          "solution": "print('forest')",
+          "mode": "output",
+          "expected": "forest",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "第一片叶子亮了起来，森林深处出现一条由空格铺成的小径。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "第一片叶子亮了起来，森林深处出现一条由空格铺成的小径。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "叶灵",
+              "text": "再往前，路会变窄。你要不要继续？",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我已经看见下一层了。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "继续向森林深处走",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "第二层树冠",
+          "text": "树冠要求你打印三个星号，不能多也不能少。",
+          "prompt": "输出：***",
+          "time": 240,
+          "starter": "# 输出三个星号\n",
+          "solution": "print('***')",
+          "mode": "output",
+          "expected": "***",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "森林安静下来。你听见树根下面有很轻的敲击声，像有人在数空格。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "森林安静下来。你听见树根下面有很轻的敲击声，像有人在数空格。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "叶灵",
+              "text": "那声音不是风声。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我知道。它在等我做一个选择。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "把耳朵贴近树根，听清那串空格",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "树影归位",
+          "text": "你让每一行都站在正确的位置，森林重新长出了路。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 零号树根",
+          "text": "你把耳朵贴近树根，听见最底层有一个从未被打印的空字符串。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "原路返回",
+          "text": "你没有继续深入，森林把你的脚印留在了入口。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "倒计时结束时，最后一行缩进塌了下去。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你主动收手，叶灵没有拦你。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "旁观者",
+          "text": "你绕过了所有树，森林没有记住你的名字。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "post",
+      "title": "变量邮局",
+      "subtitle": "给每个包裹贴一个名字",
+      "difficulty": 2,
+      "intro": "变量邮局的每个包裹都需要一个名字。名字贴错，包裹就会寄到错误的地址。\n\n创建变量 language，让它保存 Python，然后打印 I love Python。",
+      "color": "#6CB6FF",
+      "companion": "邮差鸽",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "邮局柜台",
+          "text": "变量邮局的每个包裹都需要一个名字。名字贴错，包裹就会寄到错误的地址。\n\n创建变量 language，让它保存 Python，然后打印 I love Python。",
+          "choices": [
+            {
+              "text": "先检查所有标签",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "拿起最近的包裹就走",
+              "next": "code1"
+            },
+            {
+              "text": "去后门找管理员",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "变量邮局的每个包裹都需要一个名字。名字贴错，包裹就会寄到错误的地址。\n\n创建变量 language，让它保存 Python，然后打印 I love Python。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "邮差鸽",
+              "text": "名字要写清楚，大小写也算数。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先给这个包裹贴上 language。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "变量邮局的每个包裹都需要一个名字。名字贴错，包裹就会寄到错误的地址。\n\n创建变量 language，让它保存 Python，然后打印 I love Python。\n\n创建变量 language = \"Python\"，输出：I love Python",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "贴标签",
+          "text": "柜台上放着一个空包裹。",
+          "prompt": "创建变量 language = \"Python\"，输出：I love Python",
+          "time": 270,
+          "starter": "language = \"\"\nprint(\"I love\", language)\n",
+          "solution": "language = \"Python\"\nprint(\"I love\", language)",
+          "mode": "output",
+          "expected": "I love Python",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "包裹被送进分拣轨道，墙上的地址牌闪了一下。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "包裹被送进分拣轨道，墙上的地址牌闪了一下。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "邮差鸽",
+              "text": "下一站是数字仓。那里只收整数。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那就把字符串换成数字。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "跟包裹进入数字仓",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "数字仓",
+          "text": "数字仓的门牌只接受整数。",
+          "prompt": "把字符串 \"25\" 转成整数，加 5 后输出：30",
+          "time": 240,
+          "starter": "text = \"25\"\n# 转换并计算\n",
+          "solution": "text = \"25\"\nnumber = int(text)\nprint(number + 5)",
+          "mode": "output",
+          "expected": "30",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "分拣轨道停了。最后一封信没有地址，只有一个空变量名。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "分拣轨道停了。最后一封信没有地址，只有一个空变量名。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "邮差鸽",
+              "text": "这封信是写给未来的你的。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那我得先给它一个名字。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "拆开那封没有地址的信",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "准确投递",
+          "text": "所有包裹都找到了自己的名字，邮局重新开门。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 未命名变量",
+          "text": "信封里只有一个名字：None。它一直在等第一次赋值。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "退回寄件人",
+          "text": "你把包裹放回柜台，选择不寄出。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "分拣带停了，包裹卡在错误的地址。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你放下标签，邮差鸽替你收了尾。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "错位邮路",
+          "text": "包裹寄到了隔壁城市，收件人也叫 Python。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "clock",
+      "title": "循环钟楼",
+      "subtitle": "让钟摆重复正确的次数",
+      "difficulty": 2,
+      "intro": "钟楼的齿轮只会按循环转动。转多了会卡住，转少了会停摆。\n\n用 for 循环输出 1 到 5。",
+      "color": "#FFD43B",
+      "companion": "齿轮鼠",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "钟楼底层",
+          "text": "钟楼的齿轮只会按循环转动。转多了会卡住，转少了会停摆。\n\n用 for 循环输出 1 到 5。",
+          "choices": [
+            {
+              "text": "先数一遍台阶",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接跑上钟楼",
+              "next": "code1"
+            },
+            {
+              "text": "从侧门离开",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "钟楼的齿轮只会按循环转动。转多了会卡住，转少了会停摆。\n\n用 for 循环输出 1 到 5。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "齿轮鼠",
+              "text": "range 的终点不包含，别多走一格。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先让齿轮转五格。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "钟楼的齿轮只会按循环转动。转多了会卡住，转少了会停摆。\n\n用 for 循环输出 1 到 5。\n\n输出 1 到 5，每行一个数字",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一圈",
+          "text": "齿轮组等待第一段循环。",
+          "prompt": "输出 1 到 5，每行一个数字",
+          "time": 270,
+          "starter": "for i in range(1, 6):\n    pass\n",
+          "solution": "for i in range(1, 6):\n    print(i)",
+          "mode": "output",
+          "expected": "1\n2\n3\n4\n5",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "钟摆开始摆动，楼顶传来第二组齿轮的咬合声。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "钟摆开始摆动，楼顶传来第二组齿轮的咬合声。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "齿轮鼠",
+              "text": "上面那组要 while。条件不满足就停。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我去把总和推到 10 以上。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "爬上第二层钟楼",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "累加齿轮",
+          "text": "第二组齿轮只认累加和。",
+          "prompt": "用 while 从 1 开始累加，直到和大于 10，输出最后的和：15",
+          "time": 240,
+          "starter": "total = 0\nn = 0\n",
+          "solution": "total = 0\nn = 0\nwhile total <= 10:\n    n += 1\n    total += n\nprint(total)",
+          "mode": "output",
+          "expected": "15",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "钟楼重新走动。最顶层有一扇没有刻度的门，门缝里传出滴答声。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "钟楼重新走动。最顶层有一扇没有刻度的门，门缝里传出滴答声。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "齿轮鼠",
+              "text": "那扇门不在循环里。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "所以它才值得看一眼。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "推开没有刻度的门",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "钟声复鸣",
+          "text": "齿轮重新咬合，整座城的钟同时响起。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 第零秒",
+          "text": "门后没有时间，只有循环开始前的第一次滴答。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "停在半层",
+          "text": "你停在钟楼半层，听着钟声从头顶经过。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "齿轮转过了头，钟摆卡在最后一格。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你松开摇柄，钟楼慢慢停下。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一座钟",
+          "text": "你从侧门离开，听见远处还有一座钟在走。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "market",
+      "title": "列表集市",
+      "subtitle": "让每件货物排好队",
+      "difficulty": 2,
+      "intro": "列表集市的摊位按顺序排列。你要把货物放对位置，再让它们按大小排好。\n\n从 [1, 2, 3] 开始，在末尾加 4，再删掉 2，输出 [1, 3, 4]。",
+      "color": "#FF9F6E",
+      "companion": "篮灵",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "集市入口",
+          "text": "列表集市的摊位按顺序排列。你要把货物放对位置，再让它们按大小排好。\n\n从 [1, 2, 3] 开始，在末尾加 4，再删掉 2，输出 [1, 3, 4]。",
+          "choices": [
+            {
+              "text": "先看摊位编号",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "挤进人群",
+              "next": "code1"
+            },
+            {
+              "text": "去集市后门",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "列表集市的摊位按顺序排列。你要把货物放对位置，再让它们按大小排好。\n\n从 [1, 2, 3] 开始，在末尾加 4，再删掉 2，输出 [1, 3, 4]。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "篮灵",
+              "text": "append 放末尾，remove 删值，别搞反。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先让货物排成一队。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "列表集市的摊位按顺序排列。你要把货物放对位置，再让它们按大小排好。\n\n从 [1, 2, 3] 开始，在末尾加 4，再删掉 2，输出 [1, 3, 4]。\n\n从 [1, 2, 3] 开始，末尾加 4，删掉 2，输出 [1, 3, 4]",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "整理货篮",
+          "text": "篮灵把三件货物倒在你面前。",
+          "prompt": "从 [1, 2, 3] 开始，末尾加 4，删掉 2，输出 [1, 3, 4]",
+          "time": 270,
+          "starter": "nums = [1, 2, 3]\n",
+          "solution": "nums = [1, 2, 3]\nnums.append(4)\nnums.remove(2)\nprint(nums)",
+          "mode": "output",
+          "expected": "[1, 3, 4]",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "货篮轻了一点，集市深处的拍卖台亮起灯。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "货篮轻了一点，集市深处的拍卖台亮起灯。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "篮灵",
+              "text": "拍卖台要排序后的价格。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "把 [4, 2, 9, 1] 排好就行。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "走向拍卖台",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "拍卖台",
+          "text": "拍卖台只接受排好序的价格表。",
+          "prompt": "把 [4, 2, 9, 1] 从小到大排序并输出总和：16",
+          "time": 240,
+          "starter": "nums = [4, 2, 9, 1]\n",
+          "solution": "nums = [4, 2, 9, 1]\nnums.sort()\nprint(nums)\nprint(sum(nums))",
+          "mode": "output",
+          "expected": "[1, 2, 4, 9]\n16",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "集市收摊了。最后一个摊位下面压着一张没有价格的清单。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "集市收摊了。最后一个摊位下面压着一张没有价格的清单。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "篮灵",
+              "text": "清单上只有索引，没有货物。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那我按索引找找看。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "翻开没有价格的清单",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "集市重开",
+          "text": "所有货物归位，集市在清晨重新开张。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 负索引",
+          "text": "清单最后一页写着 -1，它指向集市从未展示过的那件货物。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "空手而归",
+          "text": "你没有买任何东西，集市依然热闹。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "拍卖槌落下，你的价格表还没排好。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你放下货篮，篮灵替你收好。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "隔壁摊位",
+          "text": "你去了隔壁摊位，那里的货物从不排序。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "library",
+      "title": "字典图书馆",
+      "subtitle": "用键找到那本唯一的书",
+      "difficulty": 3,
+      "intro": "字典图书馆没有书架编号，只有键。你得用键找到对应的书。\n\n创建字典 {\"name\": \"Python\", \"year\": 1991}，输出 name 的值。",
+      "color": "#B392F0",
+      "companion": "书签狐",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "图书馆大厅",
+          "text": "字典图书馆没有书架编号，只有键。你得用键找到对应的书。\n\n创建字典 {\"name\": \"Python\", \"year\": 1991}，输出 name 的值。",
+          "choices": [
+            {
+              "text": "先查目录卡",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接闯进书库",
+              "next": "code1"
+            },
+            {
+              "text": "在门口等管理员",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "字典图书馆没有书架编号，只有键。你得用键找到对应的书。\n\n创建字典 {\"name\": \"Python\", \"year\": 1991}，输出 name 的值。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "书签狐",
+              "text": "键不存在时用 get，不要直接方括号。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先查 name 这个键。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "字典图书馆没有书架编号，只有键。你得用键找到对应的书。\n\n创建字典 {\"name\": \"Python\", \"year\": 1991}，输出 name 的值。\n\n创建 {\"name\": \"Python\", \"year\": 1991}，输出：Python",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "目录卡",
+          "text": "目录卡上只有一个键值对。",
+          "prompt": "创建 {\"name\": \"Python\", \"year\": 1991}，输出：Python",
+          "time": 270,
+          "starter": "info = {}\n",
+          "solution": "info = {\"name\": \"Python\", \"year\": 1991}\nprint(info[\"name\"])",
+          "mode": "output",
+          "expected": "Python",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "书架后面传来翻页声，第二本目录卡从缝隙里滑出来。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "书架后面传来翻页声，第二本目录卡从缝隙里滑出来。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "书签狐",
+              "text": "这次要用 get。没有的键给默认值。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我把 b 的值补上。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "进入书库深处",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "缺页目录",
+          "text": "第二张目录卡缺了一个键。",
+          "prompt": "从 {\"a\": 1} 开始，输出 get(\"b\", 0)，再加入 b=2 并输出字典：0 和 {\"a\": 1, \"b\": 2}",
+          "time": 240,
+          "starter": "d = {\"a\": 1}\n",
+          "solution": "d = {\"a\": 1}\nprint(d.get(\"b\", 0))\nd[\"b\"] = 2\nprint(d)",
+          "mode": "output",
+          "expected": "0\n{'a': 1, 'b': 2}",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "图书馆闭馆了。最里面那排书架没有标签，只有一本空白书。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "图书馆闭馆了。最里面那排书架没有标签，只有一本空白书。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "书签狐",
+              "text": "它没有键。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那它一定有一个还没被命名的值。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "翻开那本没有键的空白书",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "目录归位",
+          "text": "所有书都回到了正确的键下面。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 哈希深处",
+          "text": "空白书里只有一行：哈希冲突时，真正想找的键还在下一层。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "闭馆离开",
+          "text": "你没有借书，图书馆的灯一盏盏熄灭。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "闭馆铃响，你还没找到那本书。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你把目录卡放回原处，书签狐替你关灯。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一本字典",
+          "text": "你在门口找到一本旧字典，里面全是从来没有被查过的词。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "workshop",
+      "title": "函数工坊",
+      "subtitle": "把重复的动作装进机器",
+      "difficulty": 3,
+      "intro": "函数工坊里每台机器都要有入口和出口。你给它参数，它还你结果。\n\n定义 square(n) 返回平方，输出 square(6)。",
+      "color": "#5ED3B8",
+      "companion": "扳手精灵",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "工坊门口",
+          "text": "函数工坊里每台机器都要有入口和出口。你给它参数，它还你结果。\n\n定义 square(n) 返回平方，输出 square(6)。",
+          "choices": [
+            {
+              "text": "先读机器说明书",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接按启动键",
+              "next": "code1"
+            },
+            {
+              "text": "从后门溜走",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "函数工坊里每台机器都要有入口和出口。你给它参数，它还你结果。\n\n定义 square(n) 返回平方，输出 square(6)。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "扳手精灵",
+              "text": "没有 return，机器只会空转。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先让 square 有返回值。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "函数工坊里每台机器都要有入口和出口。你给它参数，它还你结果。\n\n定义 square(n) 返回平方，输出 square(6)。\n\n定义 square(n) 返回 n 的平方，输出 square(6)：36",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一台机器",
+          "text": "工作台上放着一台半成品机器。",
+          "prompt": "定义 square(n) 返回 n 的平方，输出 square(6)：36",
+          "time": 270,
+          "starter": "def square(n):\n    # TODO\n    return 0\n\nprint(square(6))\n",
+          "solution": "def square(n):\n    return n * n\n\nprint(square(6))",
+          "mode": "output",
+          "expected": "36",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "机器吐出第一块零件，工坊深处的传送带开始转动。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "机器吐出第一块零件，工坊深处的传送带开始转动。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "扳手精灵",
+              "text": "下一台要接收默认参数。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "让 repeat 默认重复两次。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "走向传送带",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "重复机器",
+          "text": "传送带尽头是一台重复机器。",
+          "prompt": "定义 repeat(text, n=2) 返回重复 n 次的字符串，输出 repeat(\"ab\", 3)：ababab",
+          "time": 240,
+          "starter": "def repeat(text, n=2):\n    # TODO\n    return \"\"\n\nprint(repeat(\"ab\", 3))\n",
+          "solution": "def repeat(text, n=2):\n    return text * n\n\nprint(repeat(\"ab\", 3))",
+          "mode": "output",
+          "expected": "ababab",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "工坊安静下来。最里面的机器没有入口，也没有出口。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "工坊安静下来。最里面的机器没有入口，也没有出口。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "扳手精灵",
+              "text": "它只接收一个参数：名字。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那它一定在等一个调用。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "对着没有入口的机器说出自己的名字",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "工坊重启",
+          "text": "所有机器都找到了自己的输入和输出。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 递归入口",
+          "text": "机器内部传来自己的回声：它在调用自己，但每次都比上一次少一层。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "关灯离开",
+          "text": "你没有启动最后一台机器，工坊的灯慢慢暗下去。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "传送带停了，零件散落一地。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你放下扳手，扳手精灵替你收好工具。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一条产线",
+          "text": "你去了另一条产线，那里的机器只会打印固定答案。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "dragon",
+      "title": "类与龙",
+      "subtitle": "给龙一个名字和一声吼",
+      "difficulty": 4,
+      "intro": "龙巢里的每条龙都有名字。没有名字的龙会忘记自己会飞。\n\n定义 Dragon 类，__init__ 保存 name，创建 Dragon(\"Smaug\") 并输出名字。",
+      "color": "#F78FB3",
+      "companion": "龙语者",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "龙巢入口",
+          "text": "龙巢里的每条龙都有名字。没有名字的龙会忘记自己会飞。\n\n定义 Dragon 类，__init__ 保存 name，创建 Dragon(\"Smaug\") 并输出名字。",
+          "choices": [
+            {
+              "text": "先观察龙的鳞片",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接走进龙巢",
+              "next": "code1"
+            },
+            {
+              "text": "在山口等天亮",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "龙巢里的每条龙都有名字。没有名字的龙会忘记自己会飞。\n\n定义 Dragon 类，__init__ 保存 name，创建 Dragon(\"Smaug\") 并输出名字。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "龙语者",
+              "text": "self 就是这条龙自己。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先给它一个名字。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "龙巢里的每条龙都有名字。没有名字的龙会忘记自己会飞。\n\n定义 Dragon 类，__init__ 保存 name，创建 Dragon(\"Smaug\") 并输出名字。\n\n定义 Dragon 类，__init__ 接收 name 并保存，输出 Dragon(\"Smaug\").name：Smaug",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "命名",
+          "text": "一条小龙抬起头看着你。",
+          "prompt": "定义 Dragon 类，__init__ 接收 name 并保存，输出 Dragon(\"Smaug\").name：Smaug",
+          "time": 270,
+          "starter": "class Dragon:\n    def __init__(self, name):\n        # TODO\n        pass\n\nd = Dragon(\"Smaug\")\nprint(d.name)\n",
+          "solution": "class Dragon:\n    def __init__(self, name):\n        self.name = name\n\nd = Dragon(\"Smaug\")\nprint(d.name)",
+          "mode": "output",
+          "expected": "Smaug",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "小龙站起来，翅膀扫过岩壁，龙巢深处传来第二声呼吸。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "小龙站起来，翅膀扫过岩壁，龙巢深处传来第二声呼吸。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "龙语者",
+              "text": "它要学会吼。方法要返回声音。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "让 speak 返回 roar。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "继续深入龙巢",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "第一声吼",
+          "text": "龙巢最深处，一条成年龙睁开眼睛。",
+          "prompt": "给 Dragon 增加 speak() 方法返回 \"roar\"，输出 Dragon(\"Smaug\").speak()：roar",
+          "time": 240,
+          "starter": "class Dragon:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        # TODO\n        return \"\"\n\nprint(Dragon(\"Smaug\").speak())\n",
+          "solution": "class Dragon:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return \"roar\"\n\nprint(Dragon(\"Smaug\").speak())",
+          "mode": "output",
+          "expected": "roar",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "成年龙没有攻击你。它只是看着你，像在等一个更古老的名字。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "成年龙没有攻击你。它只是看着你，像在等一个更古老的名字。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "龙语者",
+              "text": "它记得所有继承自它的龙。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那它也应该记得自己。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "叫出那条龙被遗忘的真名",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "龙巢黎明",
+          "text": "龙群重新记起了自己的名字，龙巢在晨光里安静下来。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 父类之影",
+          "text": "真名浮现时，你看见所有龙都继承自同一个没有名字的父类。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "下山",
+          "text": "你没有叫醒任何一条龙，山谷恢复了安静。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "龙巢的门合上了，最后一声吼被关在里面。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你退后一步，龙语者替你把名字写在石壁上。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一条龙",
+          "text": "你遇见一条不会飞的龙，它说自己不需要名字。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "swamp",
+      "title": "异常沼泽",
+      "subtitle": "在出错的地方接住自己",
+      "difficulty": 4,
+      "intro": "异常沼泽会把没有处理的错误变成怪物。你要在它扩散前接住它。\n\n捕获除以零异常，输出 cannot divide。",
+      "color": "#FFB86B",
+      "companion": "萤火蛙",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "沼泽边缘",
+          "text": "异常沼泽会把没有处理的错误变成怪物。你要在它扩散前接住它。\n\n捕获除以零异常，输出 cannot divide。",
+          "choices": [
+            {
+              "text": "先试水深",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接踩进去",
+              "next": "code1"
+            },
+            {
+              "text": "沿着岸边绕行",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "异常沼泽会把没有处理的错误变成怪物。你要在它扩散前接住它。\n\n捕获除以零异常，输出 cannot divide。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "萤火蛙",
+              "text": "except 只接住你指定的那种错误。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先让 ZeroDivisionError 被接住。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "异常沼泽会把没有处理的错误变成怪物。你要在它扩散前接住它。\n\n捕获除以零异常，输出 cannot divide。\n\n捕获除以零异常，输出：cannot divide",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一片泥潭",
+          "text": "泥潭里浮出一行会爆炸的除法。",
+          "prompt": "捕获除以零异常，输出：cannot divide",
+          "time": 270,
+          "starter": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    # TODO\n    pass\n",
+          "solution": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print(\"cannot divide\")",
+          "mode": "output",
+          "expected": "cannot divide",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "泥潭安静了一瞬，沼泽深处又冒出一个新的错误泡泡。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "泥潭安静了一瞬，沼泽深处又冒出一个新的错误泡泡。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "萤火蛙",
+              "text": "这次是 ValueError。输入不是数字。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那就让它输出 bad value。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "继续向沼泽深处走",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "错误泡泡",
+          "text": "一个字符串被当成了数字。",
+          "prompt": "捕获 int(\"abc\") 的 ValueError，输出：bad value",
+          "time": 240,
+          "starter": "text = \"abc\"\ntry:\n    int(text)\nexcept ValueError:\n    # TODO\n    pass\n",
+          "solution": "text = \"abc\"\ntry:\n    int(text)\nexcept ValueError:\n    print(\"bad value\")",
+          "mode": "output",
+          "expected": "bad value",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "沼泽停止了冒泡。最中央有一口不冒泡的井，井水黑得像没有异常的世界。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "沼泽停止了冒泡。最中央有一口不冒泡的井，井水黑得像没有异常的世界。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "萤火蛙",
+              "text": "那口井没有报错。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "所以才更值得看看。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "向不冒泡的井里投入一个未捕获的异常",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "沼泽退去",
+          "text": "你接住了所有错误，沼泽退回成一片普通的湿地。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 异常之底",
+          "text": "井底沉睡着所有被捕获前的原始异常，它们一直在等一个 finally。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "沿原路返回",
+          "text": "你没有继续深入，沼泽在你身后慢慢合拢。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "错误泡泡炸开，泥水漫过了最后一行代码。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你退回岸边，萤火蛙替你熄灭了火把。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一片湿地",
+          "text": "你绕过沼泽，听见远处有另一只青蛙在叫。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "stars",
+      "title": "推导式星图",
+      "subtitle": "把一颗颗星压成一条光",
+      "difficulty": 5,
+      "intro": "星图台把整片星空压缩成一行表达式。每一颗星都要经过筛选和变换。\n\n用列表推导式生成 1 到 5 的平方并输出。",
+      "color": "#5ED3B8",
+      "companion": "星尘狐",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "星图台",
+          "text": "星图台把整片星空压缩成一行表达式。每一颗星都要经过筛选和变换。\n\n用列表推导式生成 1 到 5 的平方并输出。",
+          "choices": [
+            {
+              "text": "先校准星图",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接展开星图",
+              "next": "code1"
+            },
+            {
+              "text": "关掉星图台",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "星图台把整片星空压缩成一行表达式。每一颗星都要经过筛选和变换。\n\n用列表推导式生成 1 到 5 的平方并输出。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "星尘狐",
+              "text": "先写 for，再想怎么变换。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我把每颗星都平方。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "星图台把整片星空压缩成一行表达式。每一颗星都要经过筛选和变换。\n\n用列表推导式生成 1 到 5 的平方并输出。\n\n用列表推导式输出 [1, 4, 9, 16, 25]",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一张星图",
+          "text": "星图台上漂浮着五个数字。",
+          "prompt": "用列表推导式输出 [1, 4, 9, 16, 25]",
+          "time": 270,
+          "starter": "nums = [1, 2, 3, 4, 5]\n",
+          "solution": "nums = [1, 2, 3, 4, 5]\nprint([n * n for n in nums])",
+          "mode": "output",
+          "expected": "[1, 4, 9, 16, 25]",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "星图展开成一条光带，第二层星图在光带尽头亮起。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "星图展开成一条光带，第二层星图在光带尽头亮起。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "星尘狐",
+              "text": "这次要先筛掉奇数。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "只留下偶数，组成列表。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "走进第二层星图",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "筛选星光",
+          "text": "第二层星图只接收偶数。",
+          "prompt": "从 1 到 6 中筛出偶数，输出 [2, 4, 6]",
+          "time": 240,
+          "starter": "nums = [1, 2, 3, 4, 5, 6]\n",
+          "solution": "nums = [1, 2, 3, 4, 5, 6]\nprint([n for n in nums if n % 2 == 0])",
+          "mode": "output",
+          "expected": "[2, 4, 6]",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "星图台停止转动，最深处有一颗不发光、也不参与推导的星。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "星图台停止转动，最深处有一颗不发光、也不参与推导的星。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "星尘狐",
+              "text": "它没有表达式。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "那它可能是整张星图的起点。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "把那颗不发的星放进推导式",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "星图闭合",
+          "text": "所有星光都找到了自己的表达式，星图台重新运转。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 零号星",
+          "text": "不发的星进入推导式后，整张星图从 0 开始重新生成。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "关闭星图",
+          "text": "你关掉星图台，星空恢复成原来的散点。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "星图台过热，最后一行表达式被烧掉。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你松开操作杆，星尘狐替你收起星图。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一片星空",
+          "text": "你去了另一片星空，那里的星星不需要被筛选。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    },
+    {
+      "id": "submit",
+      "title": "最终提交",
+      "subtitle": "把一路写下的代码交出去",
+      "difficulty": 5,
+      "intro": "提交大厅只接受一个完整的程序。你要把变量、循环和函数拼成最后的答案。\n\n统计 \"red blue red\" 中每个单词出现次数并输出字典。",
+      "color": "#E6C15A",
+      "companion": "提交精灵",
+      "companion2": "",
+      "companion3": "",
+      "start": "start",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "text",
+          "title": "提交大厅",
+          "text": "提交大厅只接受一个完整的程序。你要把变量、循环和函数拼成最后的答案。\n\n统计 \"red blue red\" 中每个单词出现次数并输出字典。",
+          "choices": [
+            {
+              "text": "先检查提交清单",
+              "next": "code1",
+              "setFlag": "clue"
+            },
+            {
+              "text": "直接按下提交",
+              "next": "code1"
+            },
+            {
+              "text": "把代码带回去",
+              "next": "leaveCheck",
+              "setFlag": "left"
+            }
+          ],
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "提交大厅只接受一个完整的程序。你要把变量、循环和函数拼成最后的答案。\n\n统计 \"red blue red\" 中每个单词出现次数并输出字典。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "提交精灵",
+              "text": "先让程序跑通，再想怎么写得漂亮。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "我先统计单词。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "提交大厅只接受一个完整的程序。你要把变量、循环和函数拼成最后的答案。\n\n统计 \"red blue red\" 中每个单词出现次数并输出字典。\n\n统计 \"red blue red\"，输出 {\"red\": 2, \"blue\": 1}",
+              "portrait": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "code1",
+          "type": "code",
+          "title": "第一份提交",
+          "text": "提交窗口亮起，等待一份能运行的代码。",
+          "prompt": "统计 \"red blue red\"，输出 {\"red\": 2, \"blue\": 1}",
+          "time": 270,
+          "starter": "text = \"red blue red\"\ncounts = {}\n",
+          "solution": "text = \"red blue red\"\ncounts = {}\nfor w in text.split():\n    counts[w] = counts.get(w, 0) + 1\nprint(counts)",
+          "mode": "output",
+          "expected": "{'red': 2, 'blue': 1}",
+          "stdin": "",
+          "calls": [],
+          "success": "after1",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "after1",
+          "type": "text",
+          "title": "第一道门之后",
+          "text": "提交窗口变绿，第二道验证门从地面升起。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "提交窗口变绿，第二道验证门从地面升起。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "提交精灵",
+              "text": "最后要按长度排序。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "把三个词从长到短排好。",
+              "portrait": "hero"
+            }
+          ],
+          "choices": [
+            {
+              "text": "进入最终验证",
+              "next": "code2"
+            },
+            {
+              "text": "见好就收，带着当前成果离开",
+              "next": "successCheck"
+            }
+          ]
+        },
+        {
+          "id": "code2",
+          "type": "code",
+          "title": "最终验证",
+          "text": "验证门只接受自定义排序结果。",
+          "prompt": "把 [\"bbb\", \"a\", \"cc\"] 按长度从长到短排序输出：[\"bbb\", \"cc\", \"a\"]",
+          "time": 240,
+          "starter": "words = [\"bbb\", \"a\", \"cc\"]\n",
+          "solution": "words = [\"bbb\", \"a\", \"cc\"]\nprint(sorted(words, key=len, reverse=True))",
+          "mode": "output",
+          "expected": "['bbb', 'cc', 'a']",
+          "stdin": "",
+          "calls": [],
+          "success": "final",
+          "timeout": "timeoutCheck",
+          "giveUp": "giveUpCheck"
+        },
+        {
+          "id": "final",
+          "type": "text",
+          "title": "最后的安静",
+          "text": "提交大厅安静下来。屏幕最下方有一个从未亮过的按钮，标签是空的。",
+          "lines": [
+            {
+              "speaker": "旁白",
+              "text": "提交大厅安静下来。屏幕最下方有一个从未亮过的按钮，标签是空的。",
+              "portrait": "narrator"
+            },
+            {
+              "speaker": "提交精灵",
+              "text": "那个按钮不属于这次提交。",
+              "portrait": "companion"
+            },
+            {
+              "speaker": "你",
+              "text": "但它一直在等我。",
+              "portrait": "hero"
+            },
+            {
+              "speaker": "旁白",
+              "text": "远处还有一点微光，它似乎记得你的名字。",
+              "portrait": "narrator"
+            }
+          ],
+          "choices": [
+            {
+              "text": "收下奖励，离开",
+              "next": "successCheck"
+            },
+            {
+              "text": "再检查一遍线索",
+              "next": "successCheck",
+              "setFlag": "clue"
+            },
+            {
+              "text": "按下那个没有标签的按钮",
+              "next": "successCheck",
+              "hidden": true,
+              "setFlag": "secret"
+            }
+          ]
+        },
+        {
+          "id": "successCheck",
+          "type": "check",
+          "title": "结局判定：完成之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "隐藏｜按时完成 + 发现隐藏线索 + 尝试≤2次 + 剩余≥30秒",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "secret"
+                ],
+                "minRemaining": 30,
+                "maxAttempts": 2
+              },
+              "next": "hidden"
+            },
+            {
+              "label": "按时完成 + 找到线索",
+              "when": {
+                "outcome": "success",
+                "flags": [
+                  "clue"
+                ]
+              },
+              "next": "good"
+            },
+            {
+              "label": "按时完成 + 没有找线索",
+              "when": {
+                "outcome": "success",
+                "notFlags": [
+                  "clue"
+                ]
+              },
+              "next": "alt"
+            }
+          ],
+          "defaultNext": "good"
+        },
+        {
+          "id": "timeoutCheck",
+          "type": "check",
+          "title": "结局判定：超时之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "超时",
+              "when": {
+                "outcome": "timeout"
+              },
+              "next": "timeoutEnd"
+            }
+          ],
+          "defaultNext": "timeoutEnd"
+        },
+        {
+          "id": "giveUpCheck",
+          "type": "check",
+          "title": "结局判定：放弃之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "放弃",
+              "when": {
+                "outcome": "giveup"
+              },
+              "next": "giveupEnd"
+            }
+          ],
+          "defaultNext": "giveupEnd"
+        },
+        {
+          "id": "leaveCheck",
+          "type": "check",
+          "title": "离开之后",
+          "text": "",
+          "branches": [
+            {
+              "label": "选择离开",
+              "when": {
+                "flags": [
+                  "left"
+                ]
+              },
+              "next": "neutral"
+            }
+          ],
+          "defaultNext": "neutral"
+        },
+        {
+          "id": "good",
+          "type": "ending",
+          "title": "提交成功",
+          "text": "你的程序通过了所有验证，提交大厅为你亮起绿灯。",
+          "outcome": "good"
+        },
+        {
+          "id": "hidden",
+          "type": "ending",
+          "title": "隐藏结局 · 第零次提交",
+          "text": "空按钮后面是你在写下第一行 Python 之前的那个空白文件。\n\n（隐藏结局已解锁）",
+          "outcome": "hidden",
+          "hidden": true
+        },
+        {
+          "id": "neutral",
+          "type": "ending",
+          "title": "撤回提交",
+          "text": "你撤回代码，提交大厅重新变暗。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "timeoutEnd",
+          "type": "ending",
+          "title": "时间耗尽",
+          "text": "提交窗口关闭，最后一份代码没有赶上。",
+          "outcome": "bad"
+        },
+        {
+          "id": "giveupEnd",
+          "type": "ending",
+          "title": "主动收手",
+          "text": "你保存草稿，提交精灵替你关掉窗口。",
+          "outcome": "neutral"
+        },
+        {
+          "id": "alt",
+          "type": "ending",
+          "title": "另一份答案",
+          "text": "你提交了另一份更短的答案，它也能通过，但不再属于这个故事。",
+          "outcome": "neutral"
+        }
+      ],
+      "hiddenHint": "两道编程关都要一次通过，最后剩余至少 30 秒；最后的选择里留意带“◇”的隐藏选项。"
+    }
+  ]
+}

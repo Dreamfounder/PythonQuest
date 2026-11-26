@@ -1,0 +1,2345 @@
+{
+  "chapters": [
+    {
+      "id": "basics",
+      "title": "Python 初体验",
+      "desc": "从 print 开始，认识变量、数字和代码块。",
+      "color": "#4B8BBE",
+      "lessons": [
+        {
+          "id": "py-basics-1",
+          "number": "1.1",
+          "chapter": "basics",
+          "title": "Hello, Python",
+          "subtitle": "让第一行文字出现在屏幕上",
+          "difficulty": 1,
+          "since": "",
+          "classic": false,
+          "normal": "print() 是 Python 最常用的输出函数。把字符串放进括号，运行后就会显示在控制台。",
+          "plain": "print 就像让 Python 替你说话，括号里写什么，它就念什么。",
+          "example": "print(\"Hello, Python!\")",
+          "exampleOutput": "Hello, Python!",
+          "points": [
+            "print() 输出一行文本",
+            "字符串要用引号包起来",
+            "括号和引号都要成对"
+          ],
+          "task": "输出一行：Hello, Python!",
+          "starter": "# 在这里写下你的第一行 Python\n",
+          "solution": "print(\"Hello, Python!\")",
+          "expected": "Hello, Python!",
+          "hints": [
+            "用英文双引号",
+            "注意感叹号"
+          ],
+          "minutes": 10,
+          "extension": {
+            "title": "小测 · Hello, Python",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "Python 初体验"
+        },
+        {
+          "id": "py-basics-2",
+          "number": "1.2",
+          "chapter": "basics",
+          "title": "变量是标签",
+          "subtitle": "用名字保存一个值",
+          "difficulty": 1,
+          "since": "",
+          "classic": false,
+          "normal": "变量不需要提前声明类型。赋值语句会把名字和值绑定起来，之后可以通过名字读取。",
+          "plain": "变量就像给数据贴了一个名字标签，下次叫名字就能找到它。",
+          "example": "name = \"Ada\"\nage = 36\nprint(name, age)",
+          "exampleOutput": "Ada 36",
+          "points": [
+            "变量名区分大小写",
+            "赋值使用 =",
+            "print 可以一次输出多个值"
+          ],
+          "task": "创建变量 language，值为 Python，然后输出：I love Python",
+          "starter": "language = \"\"\n# 修改上面的变量并输出\nprint(\"I love\", language)\n",
+          "solution": "language = \"Python\"\nprint(\"I love\", language)",
+          "expected": "I love Python",
+          "hints": [
+            "把空字符串改成 Python",
+            "print 中用逗号分隔"
+          ],
+          "minutes": 10,
+          "extension": {
+            "title": "小测 · 变量是标签",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "Python 初体验"
+        },
+        {
+          "id": "py-basics-3",
+          "number": "1.3",
+          "chapter": "basics",
+          "title": "数字与运算",
+          "subtitle": "加减乘除和整除",
+          "difficulty": 1,
+          "since": "",
+          "classic": false,
+          "normal": "Python 支持 + - * /，还有整除 //、取余 % 和幂 **。除法的结果默认是浮点数。",
+          "plain": "数字可以直接算，跟计算器一样；// 只留整数部分。",
+          "example": "print(7 + 3)\nprint(7 // 2)\nprint(7 % 2)",
+          "exampleOutput": "10\n3\n1",
+          "points": [
+            "/ 得到浮点数",
+            "// 是整除",
+            "% 是余数",
+            "** 是幂"
+          ],
+          "task": "输出 2 的 10 次方，再输出 17 除以 5 的余数。",
+          "starter": "print(2 ** 10)\nprint(17 % 5)\n",
+          "solution": "print(2 ** 10)\nprint(17 % 5)",
+          "expected": "1024\n2",
+          "hints": [
+            "2 ** 10",
+            "17 % 5"
+          ],
+          "minutes": 10,
+          "_chapter_title": "Python 初体验"
+        },
+        {
+          "id": "py-basics-4",
+          "number": "1.4",
+          "chapter": "basics",
+          "title": "注释与代码块",
+          "subtitle": "用 # 留下说明",
+          "difficulty": 1,
+          "since": "",
+          "classic": false,
+          "normal": "注释以 # 开头，Python 会忽略它。代码块依靠缩进表示层级，通常使用 4 个空格。",
+          "plain": "注释是写给人看的备注，缩进是写给 Python 看的层级。",
+          "example": "# 计算总价\nprice = 12\ncount = 3\nprint(price * count)",
+          "exampleOutput": "36",
+          "points": [
+            "# 后是注释",
+            "缩进通常 4 个空格",
+            "不要混用 Tab 和空格"
+          ],
+          "task": "用注释写一句“计算面积”，然后输出边长 6 的正方形面积。",
+          "starter": "# 计算面积\nside = 6\n",
+          "solution": "# 计算面积\nside = 6\nprint(side * side)",
+          "expected": "36",
+          "hints": [
+            "面积 = 边长 × 边长"
+          ],
+          "minutes": 10,
+          "_chapter_title": "Python 初体验"
+        },
+        {
+          "id": "py-basics-5",
+          "number": "1.5",
+          "chapter": "basics",
+          "title": "类型转换",
+          "subtitle": "字符串和数字互相转换",
+          "difficulty": 1,
+          "since": "",
+          "classic": false,
+          "normal": "int() 把字符串转成整数，str() 把数字转成字符串。类型不匹配时不能直接拼接。",
+          "plain": "数字和文字是两种材料，需要先转换才能拼在一起。",
+          "example": "age = 18\nprint(\"I am \" + str(age))",
+          "exampleOutput": "I am 18",
+          "points": [
+            "int(\"12\") 得到 12",
+            "str(12) 得到 \"12\"",
+            "float() 转小数"
+          ],
+          "task": "把字符串 \"25\" 转成整数，加 5，再输出结果。",
+          "starter": "text = \"25\"\n# 转换并计算\n",
+          "solution": "text = \"25\"\nnumber = int(text)\nprint(number + 5)",
+          "expected": "30",
+          "hints": [
+            "先 int(text)",
+            "再加 5"
+          ],
+          "minutes": 10,
+          "_chapter_title": "Python 初体验"
+        }
+      ]
+    },
+    {
+      "id": "strings",
+      "title": "字符串工坊",
+      "desc": "索引、切片、格式化与常用字符串方法。",
+      "color": "#FFD43B",
+      "lessons": [
+        {
+          "id": "py-strings-1",
+          "number": "2.1",
+          "chapter": "strings",
+          "title": "字符串索引",
+          "subtitle": "取出单个字符",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "字符串是有序序列，索引从 0 开始。s[0] 是第一个字符，s[-1] 是最后一个。",
+          "plain": "字符串像一排格子，编号从 0 开始，负数从右边数。",
+          "example": "s = \"Python\"\nprint(s[0])\nprint(s[-1])",
+          "exampleOutput": "P\nn",
+          "points": [
+            "索引从 0 开始",
+            "负索引从 -1 开始",
+            "越界会报 IndexError"
+          ],
+          "task": "输出 \"Quest\" 的第一个字符和最后一个字符。",
+          "starter": "s = \"Quest\"\n",
+          "solution": "s = \"Quest\"\nprint(s[0])\nprint(s[-1])",
+          "expected": "Q\nt",
+          "hints": [
+            "s[0]",
+            "s[-1]"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 字符串索引",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "字符串工坊"
+        },
+        {
+          "id": "py-strings-2",
+          "number": "2.2",
+          "chapter": "strings",
+          "title": "切片",
+          "subtitle": "一次取出一段字符",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "切片 s[start:end] 包含 start，不包含 end。省略 start 从开头开始，省略 end 到结尾。",
+          "plain": "切片像用尺子量一段：左闭右开，取到终点前一格。",
+          "example": "s = \"Python\"\nprint(s[0:3])\nprint(s[:2])\nprint(s[-3:])",
+          "exampleOutput": "Pyt\nPy\nhon",
+          "points": [
+            "左闭右开",
+            "s[:n] 取前 n 个",
+            "s[-n:] 取后 n 个"
+          ],
+          "task": "输出 \"abcdef\" 的前三个字符和最后两个字符。",
+          "starter": "s = \"abcdef\"\n",
+          "solution": "s = \"abcdef\"\nprint(s[:3])\nprint(s[-2:])",
+          "expected": "abc\nef",
+          "hints": [
+            "s[:3]",
+            "s[-2:]"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 切片",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "字符串工坊"
+        },
+        {
+          "id": "py-strings-3",
+          "number": "2.3",
+          "chapter": "strings",
+          "title": "常用方法",
+          "subtitle": "大小写、去空格、替换",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "字符串方法返回新字符串，不会修改原字符串。常用 upper、lower、strip、replace。",
+          "plain": "方法就像字符串提供的工具，用完会给你一个新的结果。",
+          "example": "s = \"  Python  \"\nprint(s.strip().upper())",
+          "exampleOutput": "PYTHON",
+          "points": [
+            "strip 去掉两端空白",
+            "upper/lower 改大小写",
+            "replace 替换内容"
+          ],
+          "task": "把 \"  hello world  \" 去掉两端空格并改成首字母大写输出。",
+          "starter": "s = \"  hello world  \"\n",
+          "solution": "s = \"  hello world  \"\nprint(s.strip().title())",
+          "expected": "Hello World",
+          "hints": [
+            "先 strip()",
+            "再 title()"
+          ],
+          "minutes": 12,
+          "_chapter_title": "字符串工坊"
+        },
+        {
+          "id": "py-strings-4",
+          "number": "2.4",
+          "chapter": "strings",
+          "title": "格式化输出",
+          "subtitle": "把变量嵌进一句话",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "格式化字符串可以把变量放进固定文本。format() 和 f-string 都很常用。",
+          "plain": "先写好句子模板，再把变量填进占位符。",
+          "example": "name = \"Ada\"\nscore = 99\nprint(\"{}: {}\".format(name, score))",
+          "exampleOutput": "Ada: 99",
+          "points": [
+            "{} 是占位符",
+            "format 按顺序填入",
+            "f\"{name}\" 也可以"
+          ],
+          "task": "用 format 输出：Python score = 100",
+          "starter": "language = \"Python\"\nscore = 100\n",
+          "solution": "language = \"Python\"\nscore = 100\nprint(\"{} score = {}\".format(language, score))",
+          "expected": "Python score = 100",
+          "hints": [
+            "两个 {}",
+            "按顺序传参"
+          ],
+          "minutes": 12,
+          "_chapter_title": "字符串工坊"
+        },
+        {
+          "id": "py-strings-5",
+          "number": "2.5",
+          "chapter": "strings",
+          "title": "拆分与连接",
+          "subtitle": "split 和 join",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "split 把字符串按分隔符拆成列表，join 把列表用指定分隔符连接成字符串。",
+          "plain": "split 是切开，join 是粘回去，分隔符由你决定。",
+          "example": "parts = \"a,b,c\".split(\",\")\nprint(parts)\nprint(\"-\".join(parts))",
+          "exampleOutput": "['a', 'b', 'c']\na-b-c",
+          "points": [
+            "split 返回列表",
+            "join 的调用者是分隔符",
+            "列表元素必须是字符串"
+          ],
+          "task": "把 \"red green blue\" 按空格拆分，再用 / 连接输出。",
+          "starter": "s = \"red green blue\"\n",
+          "solution": "s = \"red green blue\"\nparts = s.split(\" \")\nprint(\"/\".join(parts))",
+          "expected": "red/green/blue",
+          "hints": [
+            "split(\" \")",
+            "\"/\".join(parts)"
+          ],
+          "minutes": 12,
+          "_chapter_title": "字符串工坊"
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "条件与循环",
+      "desc": "让程序学会判断、重复和提前结束。",
+      "color": "#7BD88F",
+      "lessons": [
+        {
+          "id": "py-control-1",
+          "number": "3.1",
+          "chapter": "control",
+          "title": "if 判断",
+          "subtitle": "让程序做选择",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "if 后面的条件为真时执行缩进代码块。条件通常返回 True 或 False。",
+          "plain": "如果条件成立，就走 if 里面的路。",
+          "example": "score = 80\nif score >= 60:\n    print(\"pass\")",
+          "exampleOutput": "pass",
+          "points": [
+            "if 后要加冒号",
+            "代码块要缩进",
+            "条件为 False 时跳过"
+          ],
+          "task": "如果温度大于 30，输出 hot。",
+          "starter": "temperature = 35\n",
+          "solution": "temperature = 35\nif temperature > 30:\n    print(\"hot\")",
+          "expected": "hot",
+          "hints": [
+            "if temperature > 30:",
+            "缩进 4 个空格"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · if 判断",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "条件与循环"
+        },
+        {
+          "id": "py-control-2",
+          "number": "3.2",
+          "chapter": "control",
+          "title": "if-else",
+          "subtitle": "两条路选一条",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "if 条件不成立时，执行 else 的代码块。两个分支只会执行一个。",
+          "plain": "岔路口二选一：条件真走 if，假走 else。",
+          "example": "n = 7\nif n % 2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")",
+          "exampleOutput": "odd",
+          "points": [
+            "else 不需要条件",
+            "else 和 if 对齐",
+            "两个分支只走一个"
+          ],
+          "task": "如果分数大于等于 60 输出 pass，否则输出 fail。",
+          "starter": "score = 45\n",
+          "solution": "score = 45\nif score >= 60:\n    print(\"pass\")\nelse:\n    print(\"fail\")",
+          "expected": "fail",
+          "hints": [
+            "用 else",
+            "注意缩进"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · if-else",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "条件与循环"
+        },
+        {
+          "id": "py-control-3",
+          "number": "3.3",
+          "chapter": "control",
+          "title": "elif 多分支",
+          "subtitle": "处理多个区间",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "elif 可以连续检查多个条件，从上到下匹配，命中一个就停止。",
+          "plain": "像连续问几个问题，第一个回答“是”的岔路就走进去。",
+          "example": "score = 85\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+          "exampleOutput": "B",
+          "points": [
+            "elif 是 else if",
+            "顺序很重要",
+            "最多执行一个分支"
+          ],
+          "task": "按分数输出等级：90 以上 A，80 以上 B，否则 C。当前 78。",
+          "starter": "score = 78\n",
+          "solution": "score = 78\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+          "expected": "C",
+          "hints": [
+            "先判断 90",
+            "再判断 80"
+          ],
+          "minutes": 12,
+          "_chapter_title": "条件与循环"
+        },
+        {
+          "id": "py-control-4",
+          "number": "3.4",
+          "chapter": "control",
+          "title": "for 循环",
+          "subtitle": "重复固定次数",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "for 变量 in range(n) 会从 0 到 n-1 重复。range 也可以指定起点和步长。",
+          "plain": "range 像一个计数器，for 让计数器逐个取值。",
+          "example": "for i in range(3):\n    print(i)",
+          "exampleOutput": "0\n1\n2",
+          "points": [
+            "range(3) 是 0,1,2",
+            "循环体要缩进",
+            "循环变量每轮变化"
+          ],
+          "task": "输出 1 到 5。",
+          "starter": "for i in range(1, 6):\n    pass\n",
+          "solution": "for i in range(1, 6):\n    print(i)",
+          "expected": "1\n2\n3\n4\n5",
+          "hints": [
+            "range(1, 6)",
+            "print(i)"
+          ],
+          "minutes": 12,
+          "_chapter_title": "条件与循环"
+        },
+        {
+          "id": "py-control-5",
+          "number": "3.5",
+          "chapter": "control",
+          "title": "while 与 break",
+          "subtitle": "条件循环和提前退出",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "while 在条件为真时反复执行。break 立即结束整个循环，continue 跳过本轮。",
+          "plain": "while 是“只要还成立就继续”，break 是“现在就走”。",
+          "example": "n = 0\nwhile True:\n    n += 1\n    if n == 3:\n        break\nprint(n)",
+          "exampleOutput": "3",
+          "points": [
+            "while 条件要能变化",
+            "break 结束循环",
+            "continue 跳到下一轮"
+          ],
+          "task": "用 while 从 1 开始累加，直到和大于 10，输出最后的和。",
+          "starter": "total = 0\nn = 0\n",
+          "solution": "total = 0\nn = 0\nwhile total <= 10:\n    n += 1\n    total += n\nprint(total)",
+          "expected": "15",
+          "hints": [
+            "每轮先 n += 1",
+            "再累加"
+          ],
+          "minutes": 14,
+          "_chapter_title": "条件与循环"
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "列表与元组",
+      "desc": "有序容器、增删改查、切片和嵌套结构。",
+      "color": "#FF9F6E",
+      "lessons": [
+        {
+          "id": "py-lists-1",
+          "number": "4.1",
+          "chapter": "lists",
+          "title": "创建与索引",
+          "subtitle": "列表的第一课",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "列表用方括号创建，可以存放多个值。索引和字符串一样从 0 开始。",
+          "plain": "列表像一个可变的抽屉，每个格子有编号。",
+          "example": "nums = [10, 20, 30]\nprint(nums[0])\nprint(nums[-1])",
+          "exampleOutput": "10\n30",
+          "points": [
+            "方括号创建列表",
+            "len 取长度",
+            "索引从 0 开始"
+          ],
+          "task": "创建列表 [3, 6, 9]，输出第一个和最后一个元素。",
+          "starter": "nums = [3, 6, 9]\n",
+          "solution": "nums = [3, 6, 9]\nprint(nums[0])\nprint(nums[-1])",
+          "expected": "3\n9",
+          "hints": [
+            "nums[0]",
+            "nums[-1]"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 创建与索引",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "列表与元组"
+        },
+        {
+          "id": "py-lists-2",
+          "number": "4.2",
+          "chapter": "lists",
+          "title": "增删改查",
+          "subtitle": "append、insert、remove",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "列表是可变对象。append 加到末尾，insert 插入指定位置，remove 删除第一个匹配值。",
+          "plain": "列表可以现场修改，不用重新创建。",
+          "example": "nums = [1, 2]\nnums.append(3)\nnums.insert(0, 0)\nprint(nums)",
+          "exampleOutput": "[0, 1, 2, 3]",
+          "points": [
+            "append 末尾追加",
+            "insert(index, value)",
+            "remove 删除值"
+          ],
+          "task": "从 [1, 2, 3] 开始，在末尾加 4，再把 2 删掉，输出列表。",
+          "starter": "nums = [1, 2, 3]\n",
+          "solution": "nums = [1, 2, 3]\nnums.append(4)\nnums.remove(2)\nprint(nums)",
+          "expected": "[1, 3, 4]",
+          "hints": [
+            "append(4)",
+            "remove(2)"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 增删改查",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "列表与元组"
+        },
+        {
+          "id": "py-lists-3",
+          "number": "4.3",
+          "chapter": "lists",
+          "title": "切片与遍历",
+          "subtitle": "一段一段处理列表",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "列表支持切片，也可以用 for 直接遍历元素。enumerate 同时拿到下标和值。",
+          "plain": "切片取一段，for 一次拿一个，enumerate 连编号一起拿。",
+          "example": "nums = [10, 20, 30, 40]\nfor i, x in enumerate(nums):\n    print(i, x)",
+          "exampleOutput": "0 10\n1 20\n2 30\n3 40",
+          "points": [
+            "nums[1:3] 取一段",
+            "for x in nums 遍历值",
+            "enumerate 有下标"
+          ],
+          "task": "输出列表 [5, 10, 15] 中每个元素的两倍，每行一个。",
+          "starter": "nums = [5, 10, 15]\n",
+          "solution": "nums = [5, 10, 15]\nfor x in nums:\n    print(x * 2)",
+          "expected": "10\n20\n30",
+          "hints": [
+            "for x in nums",
+            "print(x * 2)"
+          ],
+          "minutes": 14,
+          "_chapter_title": "列表与元组"
+        },
+        {
+          "id": "py-lists-4",
+          "number": "4.4",
+          "chapter": "lists",
+          "title": "排序与统计",
+          "subtitle": "sort、sorted、sum",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "sort 原地排序，sorted 返回新列表。sum、min、max 可以快速统计。",
+          "plain": "排序可以改原列表，也可以复制一份再排。",
+          "example": "nums = [3, 1, 2]\nprint(sorted(nums))\nprint(sum(nums))",
+          "exampleOutput": "[1, 2, 3]\n6",
+          "points": [
+            "sort 修改原列表",
+            "sorted 返回新列表",
+            "sum 求和"
+          ],
+          "task": "把 [4, 2, 9, 1] 从小到大排序并输出总和。",
+          "starter": "nums = [4, 2, 9, 1]\n",
+          "solution": "nums = [4, 2, 9, 1]\nnums.sort()\nprint(nums)\nprint(sum(nums))",
+          "expected": "[1, 2, 4, 9]\n16",
+          "hints": [
+            "nums.sort()",
+            "sum(nums)"
+          ],
+          "minutes": 12,
+          "_chapter_title": "列表与元组"
+        },
+        {
+          "id": "py-lists-5",
+          "number": "4.5",
+          "chapter": "lists",
+          "title": "元组与嵌套",
+          "subtitle": "不可变序列和二维表",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "元组用小括号创建，创建后不能修改。列表可以嵌套，形成二维表。",
+          "plain": "元组是封好的盒子，列表是可以继续放东西的抽屉。",
+          "example": "point = (3, 5)\nprint(point[0])\nmatrix = [[1, 2], [3, 4]]\nprint(matrix[1][0])",
+          "exampleOutput": "3\n3",
+          "points": [
+            "元组不可修改",
+            "嵌套列表用两个下标",
+            "解包 a, b = point"
+          ],
+          "task": "给定矩阵 [[1, 2], [3, 4]]，输出第一行第二个元素和第二行第一个元素。",
+          "starter": "matrix = [[1, 2], [3, 4]]\n",
+          "solution": "matrix = [[1, 2], [3, 4]]\nprint(matrix[0][1])\nprint(matrix[1][0])",
+          "expected": "2\n3",
+          "hints": [
+            "matrix[0][1]",
+            "matrix[1][0]"
+          ],
+          "minutes": 14,
+          "_chapter_title": "列表与元组"
+        }
+      ]
+    },
+    {
+      "id": "dicts",
+      "title": "字典与集合",
+      "desc": "键值映射、去重、计数和集合运算。",
+      "color": "#B392F0",
+      "lessons": [
+        {
+          "id": "py-dicts-1",
+          "number": "5.1",
+          "chapter": "dicts",
+          "title": "字典入门",
+          "subtitle": "用键取值",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "字典用键值对保存数据，键通常是字符串或数字。d[key] 读取对应值。",
+          "plain": "字典像查表：给出键，拿回值。",
+          "example": "person = {\"name\": \"Ada\", \"age\": 36}\nprint(person[\"name\"])",
+          "exampleOutput": "Ada",
+          "points": [
+            "键值对用冒号",
+            "多个键值对用逗号",
+            "键必须可哈希"
+          ],
+          "task": "创建字典 {\"name\": \"Python\", \"year\": 1991}，输出 name。",
+          "starter": "info = {\"name\": \"Python\", \"year\": 1991}\n",
+          "solution": "info = {\"name\": \"Python\", \"year\": 1991}\nprint(info[\"name\"])",
+          "expected": "Python",
+          "hints": [
+            "info[\"name\"]"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 字典入门",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "字典与集合"
+        },
+        {
+          "id": "py-dicts-2",
+          "number": "5.2",
+          "chapter": "dicts",
+          "title": "get 与更新",
+          "subtitle": "安全读取和修改",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "get(key, default) 在键不存在时返回默认值，不会报错。赋值可以新增或修改键。",
+          "plain": "get 是“没有就给我备用的”，直接方括号是“没有就报错”。",
+          "example": "d = {\"a\": 1}\nprint(d.get(\"b\", 0))\nd[\"b\"] = 2\nprint(d)",
+          "exampleOutput": "0\n{'a': 1, 'b': 2}",
+          "points": [
+            "get 不修改字典",
+            "赋值会新增键",
+            "in 可以判断键是否存在"
+          ],
+          "task": "统计字典 {\"a\": 1} 中键 b 的值，不存在时输出 0，然后加入 b=2 并输出字典。",
+          "starter": "d = {\"a\": 1}\n",
+          "solution": "d = {\"a\": 1}\nprint(d.get(\"b\", 0))\nd[\"b\"] = 2\nprint(d)",
+          "expected": "0\n{'a': 1, 'b': 2}",
+          "hints": [
+            "get(\"b\", 0)",
+            "d[\"b\"] = 2"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · get 与更新",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "字典与集合"
+        },
+        {
+          "id": "py-dicts-3",
+          "number": "5.3",
+          "chapter": "dicts",
+          "title": "遍历字典",
+          "subtitle": "keys、values、items",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "keys 遍历键，values 遍历值，items 同时遍历键和值。",
+          "plain": "items 把每一对键值打包给你。",
+          "example": "d = {\"a\": 1, \"b\": 2}\nfor k, v in d.items():\n    print(k, v)",
+          "exampleOutput": "a 1\nb 2",
+          "points": [
+            "items 返回键值对",
+            "顺序按插入顺序",
+            "可以解包 k, v"
+          ],
+          "task": "遍历 {\"x\": 10, \"y\": 20}，每行输出 key=value。",
+          "starter": "d = {\"x\": 10, \"y\": 20}\n",
+          "solution": "d = {\"x\": 10, \"y\": 20}\nfor k, v in d.items():\n    print(k + \"=\" + str(v))",
+          "expected": "x=10\ny=20",
+          "hints": [
+            "for k, v in d.items()",
+            "str(v)"
+          ],
+          "minutes": 14,
+          "_chapter_title": "字典与集合"
+        },
+        {
+          "id": "py-dicts-4",
+          "number": "5.4",
+          "chapter": "dicts",
+          "title": "集合去重",
+          "subtitle": "set 的常见用法",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "集合用大括号创建，元素不重复且无序。可以求并集、交集、差集。",
+          "plain": "集合像一个自动去重的袋子，不关心顺序。",
+          "example": "nums = [1, 2, 2, 3]\nprint(set(nums))",
+          "exampleOutput": "{1, 2, 3}",
+          "points": [
+            "set 自动去重",
+            "& 交集",
+            "| 并集",
+            "- 差集"
+          ],
+          "task": "输出去重后的列表 [1, 1, 2, 3, 3] 的集合，并输出元素个数。",
+          "starter": "nums = [1, 1, 2, 3, 3]\n",
+          "solution": "nums = [1, 1, 2, 3, 3]\nunique = set(nums)\nprint(unique)\nprint(len(unique))",
+          "expected": "{1, 2, 3}\n3",
+          "hints": [
+            "set(nums)",
+            "len(unique)"
+          ],
+          "minutes": 12,
+          "_chapter_title": "字典与集合"
+        },
+        {
+          "id": "py-dicts-5",
+          "number": "5.5",
+          "chapter": "dicts",
+          "title": "词频统计",
+          "subtitle": "用字典计数",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "遍历元素，用字典记录每个元素出现的次数。get 可以简化“第一次出现”的判断。",
+          "plain": "每看到一个词，就在它的计数器上加一。",
+          "example": "counts = {}\nfor ch in \"aba\":\n    counts[ch] = counts.get(ch, 0) + 1\nprint(counts)",
+          "exampleOutput": "{'a': 2, 'b': 1}",
+          "points": [
+            "get 默认 0",
+            "计数后赋值回去",
+            "遍历字符串得到字符"
+          ],
+          "task": "统计字符串 \"banana\" 中每个字符出现的次数并输出字典。",
+          "starter": "text = \"banana\"\ncounts = {}\n",
+          "solution": "text = \"banana\"\ncounts = {}\nfor ch in text:\n    counts[ch] = counts.get(ch, 0) + 1\nprint(counts)",
+          "expected": "{'b': 1, 'a': 3, 'n': 2}",
+          "hints": [
+            "for ch in text",
+            "counts.get(ch, 0) + 1"
+          ],
+          "minutes": 14,
+          "_chapter_title": "字典与集合"
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "函数与递归",
+      "desc": "封装逻辑、参数、返回值和递归。",
+      "color": "#6CB6FF",
+      "lessons": [
+        {
+          "id": "py-functions-1",
+          "number": "6.1",
+          "chapter": "functions",
+          "title": "定义函数",
+          "subtitle": "把代码封装成名字",
+          "difficulty": 2,
+          "since": "",
+          "classic": false,
+          "normal": "用 def 定义函数，函数体缩进。调用函数时执行函数体，return 把结果交回去。",
+          "plain": "函数像一台小机器，放进参数，得到返回值。",
+          "example": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
+          "exampleOutput": "5",
+          "points": [
+            "def 函数名(参数):",
+            "return 返回值",
+            "调用时写括号"
+          ],
+          "task": "定义 square(n) 返回平方，输出 square(6)。",
+          "starter": "def square(n):\n    # TODO\n    return 0\n\nprint(square(6))\n",
+          "solution": "def square(n):\n    return n * n\n\nprint(square(6))",
+          "expected": "36",
+          "hints": [
+            "return n * n"
+          ],
+          "minutes": 12,
+          "extension": {
+            "title": "小测 · 定义函数",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "函数与递归"
+        },
+        {
+          "id": "py-functions-2",
+          "number": "6.2",
+          "chapter": "functions",
+          "title": "参数与返回值",
+          "subtitle": "多个参数和默认值",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "函数可以有多个参数，也可以给参数默认值。return 可以返回任意对象。",
+          "plain": "参数是入口，返回值是出口；默认值让参数可以省略。",
+          "example": "def greet(name, prefix=\"Hi\"):\n    return prefix + \", \" + name\nprint(greet(\"Ada\"))",
+          "exampleOutput": "Hi, Ada",
+          "points": [
+            "默认参数放后面",
+            "return 后函数立即结束",
+            "可以返回列表或字典"
+          ],
+          "task": "定义 repeat(text, n=2) 返回重复 n 次的字符串，输出 repeat(\"ab\", 3)。",
+          "starter": "def repeat(text, n=2):\n    # TODO\n    return \"\"\n\nprint(repeat(\"ab\", 3))\n",
+          "solution": "def repeat(text, n=2):\n    return text * n\n\nprint(repeat(\"ab\", 3))",
+          "expected": "ababab",
+          "hints": [
+            "text * n"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · 参数与返回值",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "函数与递归"
+        },
+        {
+          "id": "py-functions-3",
+          "number": "6.3",
+          "chapter": "functions",
+          "title": "作用域",
+          "subtitle": "局部变量和全局变量",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "函数内部创建的变量是局部变量，只在函数内可见。读取全局变量可以，修改要小心。",
+          "plain": "函数有自己的小房间，里面的东西外面看不到。",
+          "example": "x = 10\ndef f():\n    x = 20\n    return x\nprint(f())\nprint(x)",
+          "exampleOutput": "20\n10",
+          "points": [
+            "局部变量不影响外面",
+            "参数也是局部变量",
+            "global 不推荐滥用"
+          ],
+          "task": "定义 f() 内部创建 name=\"inner\" 并返回，外面输出 f() 和全局 name=\"outer\"。",
+          "starter": "name = \"outer\"\ndef f():\n    # TODO\n    return \"\"\n\nprint(f())\nprint(name)\n",
+          "solution": "name = \"outer\"\ndef f():\n    name = \"inner\"\n    return name\n\nprint(f())\nprint(name)",
+          "expected": "inner\nouter",
+          "hints": [
+            "函数内 name = \"inner\"",
+            "return name"
+          ],
+          "minutes": 14,
+          "_chapter_title": "函数与递归"
+        },
+        {
+          "id": "py-functions-4",
+          "number": "6.4",
+          "chapter": "functions",
+          "title": "map 与 filter",
+          "subtitle": "把函数应用到序列",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "map(函数, 序列) 对每个元素应用函数，filter(函数, 序列) 只保留返回 True 的元素。",
+          "plain": "map 是批量加工，filter 是批量筛选。",
+          "example": "nums = [1, 2, 3, 4]\nprint(list(map(lambda x: x * 2, nums)))\nprint(list(filter(lambda x: x % 2 == 0, nums)))",
+          "exampleOutput": "[2, 4, 6, 8]\n[2, 4]",
+          "points": [
+            "map 返回迭代器",
+            "filter 返回迭代器",
+            "常用 list() 转回列表"
+          ],
+          "task": "用 map 把 [1, 2, 3] 每个元素加 10，输出列表。",
+          "starter": "nums = [1, 2, 3]\n",
+          "solution": "nums = [1, 2, 3]\nprint(list(map(lambda x: x + 10, nums)))",
+          "expected": "[11, 12, 13]",
+          "hints": [
+            "map(lambda x: x + 10, nums)",
+            "list(...)"
+          ],
+          "minutes": 14,
+          "_chapter_title": "函数与递归"
+        },
+        {
+          "id": "py-functions-5",
+          "number": "6.5",
+          "chapter": "functions",
+          "title": "递归",
+          "subtitle": "函数调用自己",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "递归函数要有终止条件，否则会无限调用。每次递归都把问题缩小。",
+          "plain": "递归像爬楼梯：到顶就停，否则上一层再继续。",
+          "example": "def fact(n):\n    if n <= 1:\n        return 1\n    return n * fact(n - 1)\nprint(fact(5))",
+          "exampleOutput": "120",
+          "points": [
+            "必须有终止条件",
+            "每次向终止条件靠近",
+            "递归深度有限"
+          ],
+          "task": "用递归实现斐波那契 fib(n)，输出 fib(7)。",
+          "starter": "def fib(n):\n    # TODO\n    return 0\n\nprint(fib(7))\n",
+          "solution": "def fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)\n\nprint(fib(7))",
+          "expected": "13",
+          "hints": [
+            "n < 2 返回 n",
+            "fib(n-1) + fib(n-2)"
+          ],
+          "minutes": 16,
+          "_chapter_title": "函数与递归"
+        }
+      ]
+    },
+    {
+      "id": "classes",
+      "title": "面向对象",
+      "desc": "类、对象、属性、方法和继承。",
+      "color": "#F78FB3",
+      "lessons": [
+        {
+          "id": "py-classes-1",
+          "number": "7.1",
+          "chapter": "classes",
+          "title": "第一个类",
+          "subtitle": "class 和实例",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "class 定义一类对象的模板。用类名加括号创建实例，实例可以拥有属性。",
+          "plain": "类是图纸，实例是按图纸做出来的对象。",
+          "example": "class Dog:\n    pass\n\nd = Dog()\nd.name = \"Lucky\"\nprint(d.name)",
+          "exampleOutput": "Lucky",
+          "points": [
+            "class 名首字母大写",
+            "pass 表示空代码块",
+            "实例属性用点访问"
+          ],
+          "task": "定义类 Book，创建实例并设置 title=\"Python\"，输出 title。",
+          "starter": "class Book:\n    pass\n\nb = Book()\n",
+          "solution": "class Book:\n    pass\n\nb = Book()\nb.title = \"Python\"\nprint(b.title)",
+          "expected": "Python",
+          "hints": [
+            "b.title = \"Python\""
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · 第一个类",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "面向对象"
+        },
+        {
+          "id": "py-classes-2",
+          "number": "7.2",
+          "chapter": "classes",
+          "title": "__init__ 方法",
+          "subtitle": "创建时初始化属性",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "__init__ 是构造方法，创建实例时自动调用。self 代表当前实例。",
+          "plain": "self 就是“这个对象自己”，用来把属性装到对象上。",
+          "example": "class Cat:\n    def __init__(self, name):\n        self.name = name\n\nc = Cat(\"Mimi\")\nprint(c.name)",
+          "exampleOutput": "Mimi",
+          "points": [
+            "__init__ 自动调用",
+            "self 必须是第一个参数",
+            "属性挂在 self 上"
+          ],
+          "task": "定义 Student 类，__init__ 接收 name，创建 Student(\"Ada\") 并输出 name。",
+          "starter": "class Student:\n    def __init__(self, name):\n        # TODO\n        pass\n\ns = Student(\"Ada\")\nprint(s.name)\n",
+          "solution": "class Student:\n    def __init__(self, name):\n        self.name = name\n\ns = Student(\"Ada\")\nprint(s.name)",
+          "expected": "Ada",
+          "hints": [
+            "self.name = name"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · __init__ 方法",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "面向对象"
+        },
+        {
+          "id": "py-classes-3",
+          "number": "7.3",
+          "chapter": "classes",
+          "title": "实例方法",
+          "subtitle": "让对象拥有行为",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "实例方法第一个参数是 self，可以读取和修改实例属性。",
+          "plain": "方法就是对象会做的动作，调用时用对象.方法()。",
+          "example": "class Counter:\n    def __init__(self):\n        self.n = 0\n    def inc(self):\n        self.n += 1\n\nc = Counter()\nc.inc()\nprint(c.n)",
+          "exampleOutput": "1",
+          "points": [
+            "方法第一个参数 self",
+            "调用不用传 self",
+            "方法可以修改属性"
+          ],
+          "task": "定义 Rectangle，__init__ 保存 w/h，area() 返回面积，输出 Rectangle(3,4).area()。",
+          "starter": "class Rectangle:\n    def __init__(self, w, h):\n        self.w = w\n        self.h = h\n    def area(self):\n        # TODO\n        return 0\n\nprint(Rectangle(3, 4).area())\n",
+          "solution": "class Rectangle:\n    def __init__(self, w, h):\n        self.w = w\n        self.h = h\n    def area(self):\n        return self.w * self.h\n\nprint(Rectangle(3, 4).area())",
+          "expected": "12",
+          "hints": [
+            "return self.w * self.h"
+          ],
+          "minutes": 14,
+          "_chapter_title": "面向对象"
+        },
+        {
+          "id": "py-classes-4",
+          "number": "7.4",
+          "chapter": "classes",
+          "title": "继承",
+          "subtitle": "在父类基础上扩展",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "子类可以继承父类的属性和方法，用 super() 调用父类构造方法。",
+          "plain": "继承是“站在父类肩膀上”，子类可以复用再增加。",
+          "example": "class Animal:\n    def speak(self):\n        return \"...\"\nclass Dog(Animal):\n    def speak(self):\n        return \"woof\"\nprint(Dog().speak())",
+          "exampleOutput": "woof",
+          "points": [
+            "class 子类(父类)",
+            "super() 调用父类",
+            "子类可以重写方法"
+          ],
+          "task": "定义 Animal 的 name 属性，Dog 继承 Animal 并增加 speak() 返回 \"woof\"，输出 Dog(\"Lucky\").speak()。",
+          "starter": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def speak(self):\n        # TODO\n        return \"\"\n\nprint(Dog(\"Lucky\").speak())\n",
+          "solution": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def speak(self):\n        return \"woof\"\n\nprint(Dog(\"Lucky\").speak())",
+          "expected": "woof",
+          "hints": [
+            "return \"woof\""
+          ],
+          "minutes": 16,
+          "_chapter_title": "面向对象"
+        },
+        {
+          "id": "py-classes-5",
+          "number": "7.5",
+          "chapter": "classes",
+          "title": "__str__",
+          "subtitle": "让对象打印更友好",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "__str__ 定义对象被 print 或 str() 时的字符串表示。",
+          "plain": "print 对象时，Python 会问对象“你希望怎么介绍自己？”",
+          "example": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __str__(self):\n        return \"(\" + str(self.x) + \", \" + str(self.y) + \")\"\nprint(Point(1, 2))",
+          "exampleOutput": "(1, 2)",
+          "points": [
+            "__str__ 返回字符串",
+            "print 会调用它",
+            "必须 return"
+          ],
+          "task": "定义 Point(1,2)，用 __str__ 输出 (1, 2)。",
+          "starter": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __str__(self):\n        # TODO\n        return \"\"\n\nprint(Point(1, 2))\n",
+          "solution": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __str__(self):\n        return \"(\" + str(self.x) + \", \" + str(self.y) + \")\"\n\nprint(Point(1, 2))",
+          "expected": "(1, 2)",
+          "hints": [
+            "拼接括号和 str(self.x)"
+          ],
+          "minutes": 14,
+          "_chapter_title": "面向对象"
+        }
+      ]
+    },
+    {
+      "id": "errors",
+      "title": "异常处理",
+      "desc": "捕获错误、主动抛出、保证清理。",
+      "color": "#FFB86B",
+      "lessons": [
+        {
+          "id": "py-errors-1",
+          "number": "8.1",
+          "chapter": "errors",
+          "title": "try/except",
+          "subtitle": "捕获异常",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "把可能出错的代码放进 try，异常发生时执行 except，程序不会直接崩溃。",
+          "plain": "try 是“试着做”，except 是“如果出错就这样处理”。",
+          "example": "try:\n    print(1 / 0)\nexcept ZeroDivisionError:\n    print(\"cannot divide\")",
+          "exampleOutput": "cannot divide",
+          "points": [
+            "try 后跟 except",
+            "指定异常类型",
+            "except 里的代码会接管"
+          ],
+          "task": "捕获除以零异常，输出 cannot divide。",
+          "starter": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    # TODO\n    pass\n",
+          "solution": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print(\"cannot divide\")",
+          "expected": "cannot divide",
+          "hints": [
+            "except 里 print"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · try/except",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "异常处理"
+        },
+        {
+          "id": "py-errors-2",
+          "number": "8.2",
+          "chapter": "errors",
+          "title": "多个异常",
+          "subtitle": "分别处理不同错误",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "可以有多个 except，按类型捕获不同异常。也可以用 as 获取异常对象。",
+          "plain": "不同错误走不同处理窗口。",
+          "example": "try:\n    int(\"abc\")\nexcept ValueError as e:\n    print(\"bad value\")",
+          "exampleOutput": "bad value",
+          "points": [
+            "多个 except 从上到下",
+            "ValueError 类型转换失败",
+            "as e 获取对象"
+          ],
+          "task": "分别捕获 ValueError 和 ZeroDivisionError，输入 \"abc\" 时输出 bad value。",
+          "starter": "text = \"abc\"\ntry:\n    int(text)\nexcept ValueError:\n    # TODO\n    pass\n",
+          "solution": "text = \"abc\"\ntry:\n    int(text)\nexcept ValueError:\n    print(\"bad value\")",
+          "expected": "bad value",
+          "hints": [
+            "except ValueError:"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · 多个异常",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "异常处理"
+        },
+        {
+          "id": "py-errors-3",
+          "number": "8.3",
+          "chapter": "errors",
+          "title": "else 与 finally",
+          "subtitle": "成功和收尾",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "try 成功时执行 else，finally 无论成功失败都会执行，常用于清理。",
+          "plain": "else 是“没出错时再做”，finally 是“不管怎样都要做”。",
+          "example": "try:\n    x = 1\nexcept Exception:\n    print(\"err\")\nelse:\n    print(\"ok\")\nfinally:\n    print(\"done\")",
+          "exampleOutput": "ok\ndone",
+          "points": [
+            "else 只在无异常时",
+            "finally 一定执行",
+            "顺序 try→else→finally"
+          ],
+          "task": "try 中计算 1+1，成功时输出 ok，最后一定输出 done。",
+          "starter": "try:\n    x = 1 + 1\nexcept Exception:\n    print(\"err\")\nelse:\n    print(\"ok\")\nfinally:\n    print(\"done\")\n",
+          "solution": "try:\n    x = 1 + 1\nexcept Exception:\n    print(\"err\")\nelse:\n    print(\"ok\")\nfinally:\n    print(\"done\")",
+          "expected": "ok\ndone",
+          "hints": [
+            "else 和 finally"
+          ],
+          "minutes": 16,
+          "_chapter_title": "异常处理"
+        },
+        {
+          "id": "py-errors-4",
+          "number": "8.4",
+          "chapter": "errors",
+          "title": "raise 主动抛出",
+          "subtitle": "自定义错误",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "raise 可以主动抛出异常。ValueError 常用于参数不合法。",
+          "plain": "发现输入不对时，不要默默继续，主动 raise 告诉调用者。",
+          "example": "def positive(n):\n    if n <= 0:\n        raise ValueError(\"n must be positive\")\n    return n\nprint(positive(3))",
+          "exampleOutput": "3",
+          "points": [
+            "raise 异常类",
+            "可以带消息",
+            "调用方可以捕获"
+          ],
+          "task": "定义 check(n)，n 小于 0 时 raise ValueError，否则返回 n；输出 check(5)。",
+          "starter": "def check(n):\n    # TODO\n    return n\n\nprint(check(5))\n",
+          "solution": "def check(n):\n    if n < 0:\n        raise ValueError(\"negative\")\n    return n\n\nprint(check(5))",
+          "expected": "5",
+          "hints": [
+            "if n < 0: raise ValueError"
+          ],
+          "minutes": 16,
+          "_chapter_title": "异常处理"
+        },
+        {
+          "id": "py-errors-5",
+          "number": "8.5",
+          "chapter": "errors",
+          "title": "防御式编程",
+          "subtitle": "先验证再处理",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "处理用户输入或外部数据时，先检查类型、范围和格式，避免异常扩散。",
+          "plain": "不要假设输入一定正确，先检查再使用。",
+          "example": "def safe_div(a, b):\n    if b == 0:\n        return None\n    return a / b\nprint(safe_div(10, 2))",
+          "exampleOutput": "5.0",
+          "points": [
+            "检查边界",
+            "返回明确结果",
+            "异常只处理真正异常"
+          ],
+          "task": "实现 safe_div(a,b)，b 为 0 返回 0，否则返回 a/b；输出 safe_div(10,0) 和 safe_div(10,2)。",
+          "starter": "def safe_div(a, b):\n    # TODO\n    return 0\n\nprint(safe_div(10, 0))\nprint(safe_div(10, 2))\n",
+          "solution": "def safe_div(a, b):\n    if b == 0:\n        return 0\n    return a / b\n\nprint(safe_div(10, 0))\nprint(safe_div(10, 2))",
+          "expected": "0\n5.0",
+          "hints": [
+            "if b == 0: return 0"
+          ],
+          "minutes": 16,
+          "_chapter_title": "异常处理"
+        }
+      ]
+    },
+    {
+      "id": "comprehension",
+      "title": "推导式与迭代",
+      "desc": "用更 Python 的方式处理序列。",
+      "color": "#5ED3B8",
+      "lessons": [
+        {
+          "id": "py-comprehension-1",
+          "number": "9.1",
+          "chapter": "comprehension",
+          "title": "列表推导式",
+          "subtitle": "一行生成列表",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "列表推导式 [表达式 for 变量 in 序列] 可以快速生成列表。",
+          "plain": "推导式把“循环 + 追加”压缩成一行。",
+          "example": "nums = [1, 2, 3]\nprint([n * 2 for n in nums])",
+          "exampleOutput": "[2, 4, 6]",
+          "points": [
+            "方括号包裹",
+            "for 后面写来源",
+            "可以加 if 过滤"
+          ],
+          "task": "用列表推导式生成 1 到 5 的平方列表并输出。",
+          "starter": "nums = [1, 2, 3, 4, 5]\n",
+          "solution": "nums = [1, 2, 3, 4, 5]\nprint([n * n for n in nums])",
+          "expected": "[1, 4, 9, 16, 25]",
+          "hints": [
+            "[n * n for n in nums]"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · 列表推导式",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "推导式与迭代"
+        },
+        {
+          "id": "py-comprehension-2",
+          "number": "9.2",
+          "chapter": "comprehension",
+          "title": "带条件的推导式",
+          "subtitle": "筛选后再变换",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "在推导式末尾加 if 条件，只保留满足条件的元素。",
+          "plain": "先筛一遍，再把留下的元素加工。",
+          "example": "nums = [1, 2, 3, 4]\nprint([n * 10 for n in nums if n % 2 == 0])",
+          "exampleOutput": "[20, 40]",
+          "points": [
+            "if 放在 for 后面",
+            "只保留条件为真的",
+            "可以同时变换"
+          ],
+          "task": "从 1 到 6 中筛出偶数，组成列表输出。",
+          "starter": "nums = [1, 2, 3, 4, 5, 6]\n",
+          "solution": "nums = [1, 2, 3, 4, 5, 6]\nprint([n for n in nums if n % 2 == 0])",
+          "expected": "[2, 4, 6]",
+          "hints": [
+            "if n % 2 == 0"
+          ],
+          "minutes": 14,
+          "extension": {
+            "title": "小测 · 带条件的推导式",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "推导式与迭代"
+        },
+        {
+          "id": "py-comprehension-3",
+          "number": "9.3",
+          "chapter": "comprehension",
+          "title": "字典推导式",
+          "subtitle": "生成键值映射",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "字典推导式 {键: 值 for 变量 in 序列} 可以快速构造字典。",
+          "plain": "每次循环产出一对键和值，最后组装成字典。",
+          "example": "nums = [1, 2, 3]\nprint({n: n * n for n in nums})",
+          "exampleOutput": "{1: 1, 2: 4, 3: 9}",
+          "points": [
+            "大括号包裹",
+            "键和值用冒号",
+            "for 提供来源"
+          ],
+          "task": "用字典推导式生成 {1: \"a\", 2: \"b\"} 并输出。",
+          "starter": "keys = [1, 2]\nvalues = [\"a\", \"b\"]\n",
+          "solution": "keys = [1, 2]\nvalues = [\"a\", \"b\"]\nprint({keys[i]: values[i] for i in range(len(keys))})",
+          "expected": "{1: 'a', 2: 'b'}",
+          "hints": [
+            "用 range(len(keys))",
+            "keys[i]: values[i]"
+          ],
+          "minutes": 16,
+          "_chapter_title": "推导式与迭代"
+        },
+        {
+          "id": "py-comprehension-4",
+          "number": "9.4",
+          "chapter": "comprehension",
+          "title": "生成器表达式",
+          "subtitle": "按需产生值",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "把列表推导式的方括号换成圆括号，就得到生成器表达式，值在迭代时逐个产生。",
+          "plain": "生成器不一次性把所有结果放进内存，而是需要时再算。",
+          "example": "gen = (n * n for n in range(3))\nfor x in gen:\n    print(x)",
+          "exampleOutput": "0\n1\n4",
+          "points": [
+            "圆括号是生成器",
+            "只能迭代一次",
+            "sum 可以直接消费"
+          ],
+          "task": "用生成器表达式计算 1 到 5 的平方和并输出。",
+          "starter": "nums = range(1, 6)\n",
+          "solution": "nums = range(1, 6)\nprint(sum(n * n for n in nums))",
+          "expected": "55",
+          "hints": [
+            "sum(生成器)"
+          ],
+          "minutes": 16,
+          "_chapter_title": "推导式与迭代"
+        },
+        {
+          "id": "py-comprehension-5",
+          "number": "9.5",
+          "chapter": "comprehension",
+          "title": "enumerate 与 zip",
+          "subtitle": "同时遍历",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "enumerate 同时给出下标和值，zip 把多个序列按位置配对。",
+          "plain": "enumerate 带编号，zip 把两条队伍并排。",
+          "example": "names = [\"a\", \"b\"]\nfor i, name in enumerate(names):\n    print(i, name)\nfor x, y in zip([1, 2], [3, 4]):\n    print(x + y)",
+          "exampleOutput": "0 a\n1 b\n4\n6",
+          "points": [
+            "enumerate 默认从 0",
+            "zip 以最短为准",
+            "可以解包"
+          ],
+          "task": "用 zip 把 [1,2,3] 和 [10,20,30] 相加，输出 [11, 22, 33]。",
+          "starter": "a = [1, 2, 3]\nb = [10, 20, 30]\n",
+          "solution": "a = [1, 2, 3]\nb = [10, 20, 30]\nprint([x + y for x, y in zip(a, b)])",
+          "expected": "[11, 22, 33]",
+          "hints": [
+            "zip(a, b)",
+            "列表推导式"
+          ],
+          "minutes": 16,
+          "_chapter_title": "推导式与迭代"
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "综合练习",
+      "desc": "把前面学到的工具组合成小项目。",
+      "color": "#E6C15A",
+      "lessons": [
+        {
+          "id": "py-projects-1",
+          "number": "10.1",
+          "chapter": "projects",
+          "title": "单词计数",
+          "subtitle": "统计一段文本",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "先用 split 拆词，再用字典计数，最后按键排序输出。",
+          "plain": "把大问题拆成拆词、计数、排序三步。",
+          "example": "text = \"a b a\"\ncounts = {}\nfor w in text.split():\n    counts[w] = counts.get(w, 0) + 1\nprint(counts)",
+          "exampleOutput": "{'a': 2, 'b': 1}",
+          "points": [
+            "split 拆词",
+            "get 计数",
+            "sorted 排序"
+          ],
+          "task": "统计 \"red blue red\" 中每个单词出现次数并输出字典。",
+          "starter": "text = \"red blue red\"\ncounts = {}\n",
+          "solution": "text = \"red blue red\"\ncounts = {}\nfor w in text.split():\n    counts[w] = counts.get(w, 0) + 1\nprint(counts)",
+          "expected": "{'red': 2, 'blue': 1}",
+          "hints": [
+            "for w in text.split()"
+          ],
+          "minutes": 16,
+          "extension": {
+            "title": "小测 · 单词计数",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "综合练习"
+        },
+        {
+          "id": "py-projects-2",
+          "number": "10.2",
+          "chapter": "projects",
+          "title": "自定义排序",
+          "subtitle": "用 key 决定顺序",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "sorted 的 key 参数接收一个函数，用函数返回值作为排序依据。",
+          "plain": "key 是给每个元素发一个“排序号码”，按号码排。",
+          "example": "words = [\"bbb\", \"a\", \"cc\"]\nprint(sorted(words, key=len))",
+          "exampleOutput": "['a', 'cc', 'bbb']",
+          "points": [
+            "key 接收函数",
+            "len 可以作为 key",
+            "reverse=True 反向"
+          ],
+          "task": "把 [\"bbb\", \"a\", \"cc\"] 按长度从长到短排序输出。",
+          "starter": "words = [\"bbb\", \"a\", \"cc\"]\n",
+          "solution": "words = [\"bbb\", \"a\", \"cc\"]\nprint(sorted(words, key=len, reverse=True))",
+          "expected": "['bbb', 'cc', 'a']",
+          "hints": [
+            "key=len",
+            "reverse=True"
+          ],
+          "minutes": 16,
+          "extension": {
+            "title": "小测 · 自定义排序",
+            "flavor": "学完这一关，用一道选择题巩固一下。",
+            "prompt": "下面哪个说法最符合本关内容？",
+            "options": [
+              "先理解再动手",
+              "只背答案不看过程",
+              "遇到错误就放弃"
+            ],
+            "answer": 0,
+            "reward": 5
+          },
+          "_chapter_title": "综合练习"
+        },
+        {
+          "id": "py-projects-3",
+          "number": "10.3",
+          "chapter": "projects",
+          "title": "矩阵转置",
+          "subtitle": "行列互换",
+          "difficulty": 4,
+          "since": "",
+          "classic": false,
+          "normal": "矩阵可以用嵌套列表表示。转置把第 i 行第 j 列变成第 j 行第 i 列。",
+          "plain": "把表格横着读改成竖着读。",
+          "example": "m = [[1, 2], [3, 4]]\nprint([[row[i] for row in m] for i in range(2)])",
+          "exampleOutput": "[[1, 3], [2, 4]]",
+          "points": [
+            "嵌套列表",
+            "行列下标互换",
+            "推导式可以嵌套"
+          ],
+          "task": "把 [[1, 2], [3, 4]] 转置后输出。",
+          "starter": "m = [[1, 2], [3, 4]]\n",
+          "solution": "m = [[1, 2], [3, 4]]\nprint([[row[i] for row in m] for i in range(2)])",
+          "expected": "[[1, 3], [2, 4]]",
+          "hints": [
+            "外层 i 是列",
+            "内层 row[i]"
+          ],
+          "minutes": 16,
+          "_chapter_title": "综合练习"
+        },
+        {
+          "id": "py-projects-4",
+          "number": "10.4",
+          "chapter": "projects",
+          "title": "回文判断",
+          "subtitle": "字符串首尾对称",
+          "difficulty": 3,
+          "since": "",
+          "classic": false,
+          "normal": "回文正着读和反着读一样。可以用切片 s[::-1] 反转后比较。",
+          "plain": "把字符串倒过来，如果和原来一样就是回文。",
+          "example": "def is_pal(s):\n    return s == s[::-1]\nprint(is_pal(\"level\"))",
+          "exampleOutput": "True",
+          "points": [
+            "s[::-1] 反转",
+            "忽略大小写可 lower",
+            "空字符串也是回文"
+          ],
+          "task": "实现 is_pal(s)，输出 is_pal(\"level\") 和 is_pal(\"python\")。",
+          "starter": "def is_pal(s):\n    # TODO\n    return False\n\nprint(is_pal(\"level\"))\nprint(is_pal(\"python\"))\n",
+          "solution": "def is_pal(s):\n    return s == s[::-1]\n\nprint(is_pal(\"level\"))\nprint(is_pal(\"python\"))",
+          "expected": "True\nFalse",
+          "hints": [
+            "s[::-1]"
+          ],
+          "minutes": 14,
+          "_chapter_title": "综合练习"
+        },
+        {
+          "id": "py-projects-5",
+          "number": "10.5",
+          "chapter": "projects",
+          "title": "迷你成绩单",
+          "subtitle": "综合使用容器和函数",
+          "difficulty": 5,
+          "since": "",
+          "classic": false,
+          "normal": "把学生和分数放进字典，计算平均分，再输出最高分学生。",
+          "plain": "先存数据，再统计，最后按结果输出。",
+          "example": "scores = {\"Ada\": 90, \"Bob\": 80}\navg = sum(scores.values()) / len(scores)\nprint(avg)",
+          "exampleOutput": "85.0",
+          "points": [
+            "字典保存映射",
+            "values 求和",
+            "max 配合 key"
+          ],
+          "task": "给定 {\"Ada\": 90, \"Bob\": 80, \"Cara\": 100}，输出平均分和最高分学生。",
+          "starter": "scores = {\"Ada\": 90, \"Bob\": 80, \"Cara\": 100}\n",
+          "solution": "scores = {\"Ada\": 90, \"Bob\": 80, \"Cara\": 100}\navg = sum(scores.values()) / len(scores)\nprint(avg)\nprint(max(scores, key=scores.get))",
+          "expected": "90.0\nCara",
+          "hints": [
+            "sum(values()) / len",
+            "max(scores, key=scores.get)"
+          ],
+          "minutes": 18,
+          "_chapter_title": "综合练习"
+        }
+      ]
+    },
+    {
+      "id": "classics",
+      "title": "经典题单 · Python 面试与算法",
+      "desc": "20 道单独成章的经典题，不计入 Python 3 主线。",
+      "color": "#FFB86B",
+      "lessons": [
+        {
+          "id": "classic-1",
+          "number": "C1",
+          "chapter": "classics",
+          "title": "FizzBuzz",
+          "subtitle": "Python 经典题单",
+          "difficulty": 3,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 1 到 15 的 FizzBuzz",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "for i in range(1, 16):\n    if i % 15 == 0:\n        print(\"FizzBuzz\")\n    elif i % 3 == 0:\n        print(\"Fizz\")\n    elif i % 5 == 0:\n        print(\"Buzz\")\n    else:\n        print(i)",
+          "expected": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-2",
+          "number": "C2",
+          "chapter": "classics",
+          "title": "判断素数",
+          "subtitle": "Python 经典题单",
+          "difficulty": 3,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 2 到 20 之间的素数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprint([n for n in range(2, 21) if is_prime(n)])",
+          "expected": "[2, 3, 5, 7, 11, 13, 17, 19]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-3",
+          "number": "C3",
+          "chapter": "classics",
+          "title": "阶乘",
+          "subtitle": "Python 经典题单",
+          "difficulty": 3,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 6 的阶乘",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def fact(n):\n    if n <= 1:\n        return 1\n    return n * fact(n - 1)\n\nprint(fact(6))",
+          "expected": "720",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-4",
+          "number": "C4",
+          "chapter": "classics",
+          "title": "斐波那契",
+          "subtitle": "Python 经典题单",
+          "difficulty": 3,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出前 10 个斐波那契数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "a, b = 0, 1\nresult = []\nfor _ in range(10):\n    result.append(a)\n    a, b = b, a + b\nprint(result)",
+          "expected": "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-5",
+          "number": "C5",
+          "chapter": "classics",
+          "title": "回文数",
+          "subtitle": "Python 经典题单",
+          "difficulty": 3,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "判断 12321 是否回文",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def is_pal(n):\n    s = str(n)\n    return s == s[::-1]\n\nprint(is_pal(12321))",
+          "expected": "True",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-6",
+          "number": "C6",
+          "chapter": "classics",
+          "title": "反转字符串",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 hello 的反转",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "s = \"hello\"\nprint(s[::-1])",
+          "expected": "olleh",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-7",
+          "number": "C7",
+          "chapter": "classics",
+          "title": "最大公约数",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 36 和 60 的最大公约数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(36, 60))",
+          "expected": "12",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-8",
+          "number": "C8",
+          "chapter": "classics",
+          "title": "二分查找",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "在有序列表中查找 7 的下标",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "nums = [1, 3, 5, 7, 9, 11]\ntarget = 7\nlow, high = 0, len(nums) - 1\nwhile low <= high:\n    mid = (low + high) // 2\n    if nums[mid] == target:\n        print(mid)\n        break\n    elif nums[mid] < target:\n        low = mid + 1\n    else:\n        high = mid - 1",
+          "expected": "3",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-9",
+          "number": "C9",
+          "chapter": "classics",
+          "title": "冒泡排序",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "把列表从小到大排序",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "nums = [5, 2, 9, 1]\nfor i in range(len(nums) - 1):\n    for j in range(len(nums) - 1 - i):\n        if nums[j] > nums[j + 1]:\n            nums[j], nums[j + 1] = nums[j + 1], nums[j]\nprint(nums)",
+          "expected": "[1, 2, 5, 9]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-10",
+          "number": "C10",
+          "chapter": "classics",
+          "title": "两数之和",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出和为 9 的两个下标",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "nums = [2, 7, 11, 15]\ntarget = 9\nseen = {}\nfor i, n in enumerate(nums):\n    if target - n in seen:\n        print([seen[target - n], i])\n        break\n    seen[n] = i",
+          "expected": "[0, 1]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-11",
+          "number": "C11",
+          "chapter": "classics",
+          "title": "合并有序列表",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "合并两个有序列表",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "a = [1, 3, 5]\nb = [2, 4, 6]\nresult = sorted(a + b)\nprint(result)",
+          "expected": "[1, 2, 3, 4, 5, 6]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-12",
+          "number": "C12",
+          "chapter": "classics",
+          "title": "杨辉三角",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出前 5 行",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "rows = []\nfor i in range(5):\n    row = [1]\n    for j in range(1, i):\n        row.append(rows[i - 1][j - 1] + rows[i - 1][j])\n    if i > 0:\n        row.append(1)\n    rows.append(row)\nfor row in rows:\n    print(row)",
+          "expected": "[1]\n[1, 1]\n[1, 2, 1]\n[1, 3, 3, 1]\n[1, 4, 6, 4, 1]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-13",
+          "number": "C13",
+          "chapter": "classics",
+          "title": "有效括号",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "判断 ()[]{} 是否有效",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "s = \"{[()]}\"\npairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\nstack = []\nok = True\nfor ch in s:\n    if ch in \"([{\":\n        stack.append(ch)\n    elif not stack or stack.pop() != pairs[ch]:\n        ok = False\n        break\nprint(ok and not stack)",
+          "expected": "True",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-14",
+          "number": "C14",
+          "chapter": "classics",
+          "title": "罗马数字",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "把 XIV 转成整数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "s = \"XIV\"\nvalues = {\"I\": 1, \"V\": 5, \"X\": 10}\ntotal = 0\nfor i, ch in enumerate(s):\n    if i + 1 < len(s) and values[ch] < values[s[i + 1]]:\n        total -= values[ch]\n    else:\n        total += values[ch]\nprint(total)",
+          "expected": "14",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-15",
+          "number": "C15",
+          "chapter": "classics",
+          "title": "最长公共前缀",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出三个单词的公共前缀",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "words = [\"flower\", \"flow\", \"flight\"]\nprefix = words[0]\nfor w in words[1:]:\n    while not w.startswith(prefix):\n        prefix = prefix[:-1]\nprint(prefix)",
+          "expected": "fl",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-16",
+          "number": "C16",
+          "chapter": "classics",
+          "title": "爬楼梯",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "每次 1 或 2 级，走 5 级有多少种",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def climb(n):\n    if n <= 2:\n        return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b\n\nprint(climb(5))",
+          "expected": "8",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-17",
+          "number": "C17",
+          "chapter": "classics",
+          "title": "只出现一次的数字",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "找出唯一出现一次的数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "nums = [4, 1, 2, 1, 2]\nresult = 0\nfor n in nums:\n    result ^= n\nprint(result)",
+          "expected": "4",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-18",
+          "number": "C18",
+          "chapter": "classics",
+          "title": "买卖股票最佳时机",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出最大利润",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "prices = [7, 1, 5, 3, 6, 4]\nlow = prices[0]\nbest = 0\nfor p in prices[1:]:\n    best = max(best, p - low)\n    low = min(low, p)\nprint(best)",
+          "expected": "5",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-19",
+          "number": "C19",
+          "chapter": "classics",
+          "title": "移动零",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "把 0 移到末尾",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "nums = [0, 1, 0, 3, 12]\nresult = [n for n in nums if n != 0]\nresult += [0] * (len(nums) - len(result))\nprint(result)",
+          "expected": "[1, 3, 12, 0, 0]",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        },
+        {
+          "id": "classic-20",
+          "number": "C20",
+          "chapter": "classics",
+          "title": "汉诺塔",
+          "subtitle": "Python 经典题单",
+          "difficulty": 4,
+          "since": "",
+          "classic": true,
+          "normal": "这道题来自 Python 面试与算法经典题单。先想清楚输入输出，再写代码。",
+          "plain": "把它当成一个小挑战：先让代码跑通，再考虑更简洁的写法。",
+          "example": "",
+          "exampleOutput": "",
+          "points": [
+            "先处理边界情况",
+            "用 print 输出最终结果",
+            "不要写死答案"
+          ],
+          "task": "输出 3 层汉诺塔移动次数",
+          "starter": "# 在这里写你的 Python 解法\n",
+          "solution": "def hanoi(n, a, b, c):\n    if n == 0:\n        return 0\n    return hanoi(n - 1, a, c, b) + 1 + hanoi(n - 1, b, a, c)\n\nprint(hanoi(3, \"A\", \"B\", \"C\"))",
+          "expected": "7",
+          "hints": [
+            "先写最小可运行版本",
+            "用 print 检查中间结果"
+          ],
+          "minutes": 15,
+          "_chapter_title": "经典题单 · Python 面试与算法"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1118">
+  <title>PythonQuest · Python 学习实验室</title>
+  <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="vendor/codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <div id="boot" class="boot">
+    <div class="boot-mark">PQ</div>
+    <div>正在加载 Python 课程数据…</div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" id="brand">
+      <span class="brand-java">Python</span><span class="brand-quest">Quest</span>
+      <small>WEB</small>
+    </a>
+    <nav class="nav">
+      <a href="#home" data-nav="home">首页</a>
+      <a href="#challenge" data-nav="challenge">闯关</a>
+      <a href="#stories" data-nav="stories">剧情</a>
+      <a href="#java8" data-nav="java8">Python 主线</a>
+      <a href="#free" data-nav="free">自由编程</a>
+      <a href="guide.html">使用指南</a>
+    </nav>
+    <div class="top-status" id="top-status">离线课程</div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="footer">
+    <span>PythonQuest Web · 课程与进度保存在浏览器本地</span>
+    <span><a href="guide.html">iPhone / iPad / Android 使用指南</a> · Python 执行：内置 Skulpt</span>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-x" data-close-modal aria-label="关闭">×</button>
+      <div id="modal-body"></div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="vendor/codemirror/lib/codemirror.js"></script>
+  <script src="vendor/codemirror/mode/python/python.js"></script>
+  <script src="vendor/codemirror/addon/edit/closebrackets.js"></script>
+  <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="vendor/codemirror/addon/hint/show-hint.js"></script>
+  <script src="vendor/skulpt/skulpt.min.js"></script>
+  <script src="vendor/skulpt/skulpt-stdlib.js"></script>
+  <script src="data.js?v=1"></script>
+  <script type="module" src="app.js?v=1"></script>
+</body>
+</html>
