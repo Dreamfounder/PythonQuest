@@ -1,0 +1,57 @@
+name: Deploy PythonQuest Web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site
+        run: |
+          rm -rf site unpack
+          mkdir -p site
+          if [ -d web ]; then
+            cp -R web/. site/
+          elif [ -f PythonQuest-Web.zip ]; then
+            unzip -q PythonQuest-Web.zip -d unpack
+            if [ -d unpack/web ]; then
+              cp -R unpack/web/. site/
+            else
+              cp -R unpack/. site/
+            fi
+          else
+            echo "找不到 web/ 或 PythonQuest-Web.zip"
+            exit 1
+          fi
+          touch site/.nojekyll
+          test -f site/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
